@@ -1,0 +1,26 @@
+<div class="container">
+  <app-menu></app-menu>
+  <h1>{{title}}</h1>
+  <app-pizza [pizza]="selectedPizza"></app-pizza>
+  <div>
+    {{pizzas | json}}
+  </div>
+
+  <div>
+    <ul>
+      <li (click)="onSelect(pizza)"
+          *ngFor="let pizza of pizzas; index as i"
+          [class.selected]="pizza === selectedPizza">
+        {{i}} : {{pizza.name}}
+      </li>
+    </ul>
+  </div>
+
+  <div>
+    <app-author [user]="user"></app-author>
+  </div>
+
+  <div>
+    <app-list-ingredients [ingredients]="ingredients"></app-list-ingredients>
+  </div>
+</div>
