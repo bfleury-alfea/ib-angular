@@ -2,7 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {Pizza} from './models/pizza.model';
 import {User} from './models/user.model';
 import {Ingredient} from './models/ingredient.model';
-import {PizzaService} from './service/pizza.service';
+import {PizzaService} from './service/pizza/pizza.service';
 
 @Component({
   selector: 'app-root',

@@ -3,10 +3,10 @@ import {NgModule} from '@angular/core';
 
 import {AppComponent} from './app.component';
 import {FormsModule} from '@angular/forms';
-import {PizzaComponent} from './Component/pizza/pizza.component';
-import {AuthorComponent} from './Component/author/author.component';
-import {ListIngredientsComponent} from './Component/list-ingredients/list-ingredients.component';
-import {MenuComponent} from './Component/menu/menu.component';
+import {PizzaComponent} from './components/pizza/pizza.component';
+import {AuthorComponent} from './components/author/author.component';
+import {ListIngredientsComponent} from './components/list-ingredients/list-ingredients.component';
+import {MenuComponent} from './components/menu/menu.component';
 
 @NgModule({
   declarations: [
