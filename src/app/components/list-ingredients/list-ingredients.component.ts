@@ -1,5 +1,6 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {Ingredient} from '../../models/ingredient.model';
+import {MessagesService} from '../../service/messages/messages.service';
 
 @Component({
   selector: 'app-list-ingredients',
@@ -11,14 +12,17 @@ export class ListIngredientsComponent implements OnInit {
   @Input() type: string;
   @Output() eventEmitter: EventEmitter<Ingredient>;
 
-  constructor() {
+  constructor(
+    private messagesService: MessagesService
+  ) {
     this.eventEmitter = new EventEmitter();
   }
 
   ngOnInit(): void {
   }
 
-  onSelect(event) {
-    this.eventEmitter.emit(event);
+  onSelect(ingredient) {
+    this.eventEmitter.emit(ingredient);
+    this.messagesService.addMessage(`L'ingrédient '${ingredient.name}' a été selectionné`, 'warning');
   }
 }

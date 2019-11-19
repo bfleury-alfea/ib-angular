@@ -1,5 +1,6 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {Pizza} from '../../models/pizza.model';
+import {MessagesService} from '../../service/messages/messages.service';
 
 @Component({
   selector: 'app-pizza',
@@ -11,7 +12,9 @@ export class PizzaComponent implements OnInit {
   @Input() select: boolean;
   @Output() eventEmitter: EventEmitter<Pizza>;
 
-  constructor() {
+  constructor(
+    private messagesService: MessagesService
+  ) {
     this.eventEmitter = new EventEmitter();
   }
 
@@ -20,5 +23,10 @@ export class PizzaComponent implements OnInit {
 
   onSelect(event) {
     this.eventEmitter.emit(this.pizza);
+    if (this.select) {
+      this.messagesService.addMessage(`La pizza '${this.pizza.name}' a été selectionnée`, 'primary');
+    } else {
+      this.messagesService.addMessage(`La pizza '${this.pizza.name}' a été déselectionnée`, 'danger');
+    }
   }
 }
