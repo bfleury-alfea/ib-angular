@@ -1,11 +1,12 @@
-<div *ngIf="pizza" class="card col-3-sm my-5">
-  <img [alt]="pizza.name" [src]="pizza.image" class="card-img-top" style="height: 200px; width: 250px;">
+<div *ngIf="pizza" class="card my-3">
+  <img [alt]="pizza.name" [src]="pizza.image" class="card-img-top img-fluid">
   <div class="card-body">
     <h5 class="card-title">{{pizza.name}}</h5>
     <p class="card-text">
-      Price : {{pizza.price}}
+      {{pizza.price}}€
+      <app-list-ingredients [ingredients]="pizza.ingredients" [type]="'list'"></app-list-ingredients>
     </p>
-    <button *ngIf="select" (click)="onSelect(pizza)" class="btn btn-primary">Select this pizza</button>
-    <button *ngIf="!select" (click)="onSelect(pizza)" class="btn btn-warning">Unselect this pizza</button>
+    <button (click)="onSelect(pizza)" *ngIf="select" class="btn btn-primary">Select this pizza</button>
+    <button (click)="onSelect(pizza)" *ngIf="!select" class="btn btn-warning">Unselect this pizza</button>
   </div>
 </div>

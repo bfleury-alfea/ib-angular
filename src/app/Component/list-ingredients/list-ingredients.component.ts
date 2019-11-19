@@ -8,6 +8,7 @@ import {Ingredient} from '../../models/ingredient.model';
 })
 export class ListIngredientsComponent implements OnInit {
   @Input() ingredients: Array<Ingredient>;
+  @Input() type: string;
   @Output() eventEmitter: EventEmitter<Ingredient>;
 
   constructor() {

@@ -7,13 +7,14 @@ const pizza1 = new Pizza(1, 'Reine', 12, 'pizza1.png');
 const pizza2 = new Pizza(2, '4 fromages', 13, 'pizza2.png');
 const pizza3 = new Pizza(3, 'Orientale', 11, 'pizza3.png');
 const pizza4 = new Pizza(4, 'Cannibale', 9, 'pizza4.png');
+const pizza5 = new Pizza(5, 'Suprème', 20, 'pizza5.png');
 
-const ing1 = new Ingredient(1, 'Sauce Tomate', '100', '3', 'sauce-tomate');
-const ing2 = new Ingredient(2, 'Mozzarella', '50', '2', 'mozzarella');
-const ing3 = new Ingredient(3, 'Chèvre', '50', '6', 'chevre');
-const ing4 = new Ingredient(4, 'Bleue', '25', '10', 'bleue');
+const ing1 = new Ingredient(1, 'Sauce BBQ', '10', '1.5', 'sauce-bbq.png');
+const ing2 = new Ingredient(2, 'Mozzarella', '10', '1', 'mozzarella.png');
+const ing3 = new Ingredient(3, 'Chèvre', '5', '2', 'chevre.jpg');
+const ing4 = new Ingredient(4, 'Roblochon', '15', '2.5', 'roblochon.png');
 
-const PIZZAS: Pizza[] = [pizza1, pizza2, pizza3, pizza4];
+const PIZZAS: Pizza[] = [pizza1, pizza2, pizza3, pizza4, pizza5];
 const INGREDIENTS = [ing1, ing2, ing3, ing4];
 
 @Component({
@@ -52,5 +53,8 @@ export class AppComponent implements OnInit {
 
   ingredientSelected(ingredient) {
     this.selectedIngredient = ingredient;
+    if (this.selectedPizza) {
+      this.selectedPizza.ingredients.push(this.selectedIngredient);
+    }
   }
 }
