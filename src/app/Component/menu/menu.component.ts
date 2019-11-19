@@ -18,6 +18,5 @@ export class MenuComponent implements OnInit {
 
   toggleCollapseNavbar() {
     this.isCollapsed = !this.isCollapsed;
-    console.log(this.isCollapsed);
   }
 }

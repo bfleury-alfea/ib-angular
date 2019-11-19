@@ -40,9 +40,6 @@ export class AppComponent implements OnInit {
     this.pizzas = PIZZAS;
     this.user = new User(1, 'John', 'Doe', '1992-12-19', 'john-doe');
     this.ingredients = INGREDIENTS;
-
-    console.log('AppComponent');
-    console.log(this.ingredients);
   }
 
   pizzaSelected(pizza) {
