@@ -1,25 +1,30 @@
 <app-menu [title]="title"></app-menu>
 <div class="container">
-  <app-pizza [pizza]="selectedPizza"></app-pizza>
-  <div>
+  <div class="pizza">
+    <app-pizza (eventEmitter)="pizzaDeselected($event)" [pizza]="selectedPizza" [select]="false"></app-pizza>
+  </div>
+
+  <div class="menu-pizzas">
+    <h2>Menu Pizza</h2>
+    <div class="pizzas row">
+      <app-pizza (eventEmitter)="pizzaSelected($event)" *ngFor="let pizza of pizzas" [pizza]="pizza" [select]="true"></app-pizza>
+    </div>
+  </div>
+
+  <!--<div>
     {{pizzas | json}}
   </div>
 
-  <div>
-    <ul>
-      <li (click)="onSelect(pizza)"
-          *ngFor="let pizza of pizzas; index as i"
-          [class.selected]="pizza === selectedPizza">
-        {{i}} : {{pizza.name}}
-      </li>
-    </ul>
-  </div>
 
   <div>
     <app-author [user]="user"></app-author>
+  </div>-->
+
+  <div>
+    <app-list-ingredients (eventEmitter)="ingredientSelected($event)" [ingredients]="ingredients"></app-list-ingredients>
   </div>
 
   <div>
-    <app-list-ingredients [ingredients]="ingredients"></app-list-ingredients>
+    <app-list-ingredients [ingredients]="selectedIngredients"></app-list-ingredients>
   </div>
 </div>

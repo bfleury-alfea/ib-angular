@@ -10,6 +10,6 @@ export class Ingredient {
     this.name = name;
     this.weight = weight;
     this.price = price;
-    this.image = '/assets/avatar/' + image + '.png';
+    this.image = '/assets/ingredients/' + image;
   }
 }

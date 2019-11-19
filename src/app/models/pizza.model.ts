@@ -8,6 +8,6 @@ export class Pizza {
     this.id = id;
     this.name = name;
     this.price = price;
-    this.image = (image ? '/assets/avatar/' + image + '.png' : null);
+    this.image = (image ? '/assets/pizza/' + image : null);
   }
 }

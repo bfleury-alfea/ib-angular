@@ -1,4 +1,4 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {Ingredient} from '../../models/ingredient.model';
 
 @Component({
@@ -8,10 +8,16 @@ import {Ingredient} from '../../models/ingredient.model';
 })
 export class ListIngredientsComponent implements OnInit {
   @Input() ingredients: Array<Ingredient>;
+  @Output() eventEmitter: EventEmitter<Ingredient>;
 
   constructor() {
+    this.eventEmitter = new EventEmitter();
   }
 
-  ngOnInit() {
+  ngOnInit(): void {
+  }
+
+  onSelect(event) {
+    this.eventEmitter.emit(event);
   }
 }

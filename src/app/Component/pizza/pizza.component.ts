@@ -1,4 +1,4 @@
-import {Component, Input} from '@angular/core';
+import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {Pizza} from '../../models/pizza.model';
 
 @Component({
@@ -6,7 +6,19 @@ import {Pizza} from '../../models/pizza.model';
   templateUrl: './pizza.component.html',
   styleUrls: ['./pizza.component.scss']
 })
-export class PizzaComponent {
-  @Input()
-  pizza: Pizza;
+export class PizzaComponent implements OnInit {
+  @Input() pizza: Pizza;
+  @Input() select: boolean;
+  @Output() eventEmitter: EventEmitter<Pizza>;
+
+  constructor() {
+    this.eventEmitter = new EventEmitter();
+  }
+
+  ngOnInit(): void {
+  }
+
+  onSelect(event) {
+    this.eventEmitter.emit(this.pizza);
+  }
 }
