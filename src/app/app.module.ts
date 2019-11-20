@@ -10,6 +10,7 @@ import {HomePageComponent} from './components/home-page/home-page.component';
 import {ListIngredientsComponent} from './components/list-ingredients/list-ingredients.component';
 import {MenuComponent} from './components/menu/menu.component';
 import {MessagesComponent} from './components/messages/messages.component';
+import {PizzaComponent} from './components/pizza/pizza.component';
 import {PizzaPageComponent} from './components/pizza-page/pizza-page.component';
 import {PizzasPageComponent} from './components/pizzas-page/pizzas-page.component';
 
@@ -28,6 +29,7 @@ import {TestPipe} from './pipes/test/test.pipe';
     ListIngredientsComponent,
     MenuComponent,
     MessagesComponent,
+    PizzaComponent,
     PizzaPageComponent,
     PizzasPageComponent,
 

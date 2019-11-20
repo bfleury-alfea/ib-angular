@@ -6,9 +6,8 @@
       {{pizza.price | tax | currency}}
       <app-list-ingredients [ingredients]="pizza.ingredients" [type]="'list'"></app-list-ingredients>
     </p>
-  </div>
-  <div>
-    <button [disabled]="isFirst" [routerLink]="['/pizzas/', pizza.id - 1]" class="button button-primary">Pizza Précédente</button>
-    <button [disabled]="isLast" [routerLink]="['/pizzas/', pizza.id + 1]" class="button button-primary">Pizza Suivante</button>
+    <button (click)="onSelect(pizza)" *ngIf="select" class="btn btn-primary">Sélectionner</button>
+    <button (click)="onSelect(pizza)" *ngIf="!select" class="btn btn-warning">Désélectionner</button>
+    <a [routerLink]="['/pizzas/', pizza.id]" class="btn btn-info">Détails</a>
   </div>
 </div>
