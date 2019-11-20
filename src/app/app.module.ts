@@ -6,12 +6,12 @@ import {RouterModule} from '@angular/router';
 // Components //
 import {AppComponent} from './app.component';
 import {AuthorComponent} from './components/author/author.component';
-import {HomeComponent} from './components/home/home/home.component';
+import {HomePageComponent} from './components/home-page/home-page.component';
 import {ListIngredientsComponent} from './components/list-ingredients/list-ingredients.component';
 import {MenuComponent} from './components/menu/menu.component';
 import {MessagesComponent} from './components/messages/messages.component';
-import {PizzaComponent} from './components/pizza/pizza.component';
-import {PizzasComponent} from './components/pizzas/pizzas/pizzas.component';
+import {PizzaPageComponent} from './components/pizza-page/pizza-page.component';
+import {PizzasPageComponent} from './components/pizzas-page/pizzas-page.component';
 
 // Pipes //
 import {AgePipe} from './pipes/age/age.pipe';
@@ -24,12 +24,12 @@ import {TestPipe} from './pipes/test/test.pipe';
   declarations: [
     AppComponent,
     AuthorComponent,
-    HomeComponent,
+    HomePageComponent,
     ListIngredientsComponent,
     MenuComponent,
     MessagesComponent,
-    PizzaComponent,
-    PizzasComponent,
+    PizzaPageComponent,
+    PizzasPageComponent,
 
     AgePipe,
     CurrencyPipe,
@@ -43,15 +43,15 @@ import {TestPipe} from './pipes/test/test.pipe';
     RouterModule.forRoot([
       {
         path: '',
-        component: HomeComponent
+        component: HomePageComponent
       },
       {
         path: 'pizzas',
-        component: PizzasComponent,
+        component: PizzasPageComponent,
       },
       {
         path: 'pizzas/:id',
-        component: PizzaComponent,
+        component: PizzaPageComponent,
       },
     ])
   ],

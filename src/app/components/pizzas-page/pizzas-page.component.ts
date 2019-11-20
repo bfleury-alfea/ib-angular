@@ -1,15 +1,15 @@
 import {Component, OnInit} from '@angular/core';
-import {User} from '../../../models/user.model';
-import {Pizza} from '../../../models/pizza.model';
-import {Ingredient} from '../../../models/ingredient.model';
-import {PizzaService} from '../../../service/pizza/pizza.service';
+import {User} from '../../models/user.model';
+import {Pizza} from '../../models/pizza.model';
+import {Ingredient} from '../../models/ingredient.model';
+import {PizzaService} from '../../services/pizza/pizza.service';
 
 @Component({
   selector: 'app-pizzas',
-  templateUrl: './pizzas.component.html',
-  styleUrls: ['./pizzas.component.scss']
+  templateUrl: './pizzas-page.component.html',
+  styleUrls: ['./pizzas-page.component.scss']
 })
-export class PizzasComponent implements OnInit {
+export class PizzasPageComponent implements OnInit {
   pizzas: Pizza[];
   selectedPizza: Pizza;
 
