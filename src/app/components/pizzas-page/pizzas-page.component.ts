@@ -31,7 +31,6 @@ export class PizzasPageComponent implements OnInit {
     // this.pizzaService.getPizzas().then((pizzas) => this.pizzas = pizzas);
 
     this.route.data.subscribe((data) => {
-      console.log(data.pizzas);
       this.pizzas = data.pizzas;
     });
 

@@ -1,1 +1,39 @@
 <p>home works!</p>
+<div class="row">
+  <div appTest="toto">
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+    Fugiat neque pariatur, placeat porro quis velit! Adipisci alias amet consequuntur dolorem
+    enim exercitationem hic laudantium molestias officia placeat, qui sunt ullam.
+  </div>
+</div>
+
+<div class="row">
+  <label for="test-dc-empty">Change color :</label>
+  <input [(ngModel)]="color" appDCEmpty class="form-control" id="test-dc-empty" #search="ngModel">
+  <!--  <p [ngModel]="color"></p>-->
+
+  <p [appBg]="color">
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+    Fugiat neque pariatur, placeat porro quis velit! Adipisci alias amet consequuntur dolorem
+    enim exercitationem hic laudantium molestias officia placeat, qui sunt ullam.
+  </p>
+</div>
+
+<div class="row">
+</div>
+
+<div class="row">
+  <div class="dropdown">
+    <button appDropdownToggle class="btn btn-secondary dropdown-toggle">
+      Dropdown button
+    </button>
+    <div class="dropdown-menu">
+      <a class="dropdown-item" href="#">Action</a>
+      <a class="dropdown-item" href="#">Another action</a>
+      <a class="dropdown-item" href="#">Something else here</a>
+    </div>
+  </div>
+</div>
+
+
+
