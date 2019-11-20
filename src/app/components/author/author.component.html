@@ -1,26 +1,5 @@
 <div *ngIf="user">
-  <div>
-    <label>ID :</label>
-    {{user.id}}
-  </div>
-
-  <div>
-    <label>Firstname :</label>
-    {{user.firstname}}
-  </div>
-
-  <div>
-    <label>Lastname :</label>
-    {{user.lastname}}
-  </div>
-
-  <div>
-    <label>Age :</label>
-    {{user.age}} ({{user.birthday}})
-  </div>
-
-  <div>
-    <label>Avatar :</label>
-    <img [alt]="user.avatar" [src]="user.avatar"/>
-  </div>
+  Author :
+  <img [alt]="user.lastname" [src]="user.avatar" width="20px"/>
+  {{user.firstname}} {{user.lastname | uppercase}} ({{user.birthday | age}} ans)
 </div>

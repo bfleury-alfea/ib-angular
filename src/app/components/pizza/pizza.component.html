@@ -3,7 +3,7 @@
   <div class="card-body">
     <h5 class="card-title">{{pizza.name}}</h5>
     <p class="card-text">
-      {{pizza.price}}€
+      {{pizza.price | tax | currency}}
       <app-list-ingredients [ingredients]="pizza.ingredients" [type]="'list'"></app-list-ingredients>
     </p>
     <button (click)="onSelect(pizza)" *ngIf="select" class="btn btn-primary">Select this pizza</button>

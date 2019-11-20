@@ -7,6 +7,7 @@ export class TaxPipe implements PipeTransform {
 
   transform(value: any, ...args: any[]): any {
     const tax = (args[0] || 20);
-    return value * (1 + tax / 100);
+    const price = value * (1 + tax / 100);
+    return price.toFixed(2).replace('.', ',');
   }
 }

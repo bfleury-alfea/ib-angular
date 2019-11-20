@@ -12,6 +12,9 @@ import {MessagesComponent} from './components/messages/messages.component';
 // Pipes //
 import {TaxPipe} from './pipes/tax/tax.pipe';
 import {TestPipe} from './pipes/test/test.pipe';
+import {AgePipe} from './pipes/age/age.pipe';
+import { CurrencyPipe } from './pipes/currency/currency.pipe';
+import { SortPipe } from './pipes/sort/sort.pipe';
 
 @NgModule({
   declarations: [
@@ -23,7 +26,10 @@ import {TestPipe} from './pipes/test/test.pipe';
     MessagesComponent,
 
     TaxPipe,
-    TestPipe
+    TestPipe,
+    AgePipe,
+    CurrencyPipe,
+    SortPipe
   ],
   imports: [
     BrowserModule,

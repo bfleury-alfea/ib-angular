@@ -12,10 +12,6 @@ export class User {
     this.firstname = firstname;
     this.lastname = lastname;
     this.birthday = new Date(moment(birthday).format());
-    this.avatar = '/assets/avatar/' + avatar + '.png';
-  }
-
-  get age() {
-    return moment().diff(this.birthday, 'years');
+    this.avatar = '/assets/avatars/' + avatar;
   }
 }

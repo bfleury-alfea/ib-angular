@@ -20,6 +20,8 @@ export class AppComponent implements OnInit {
   ingredients: Array<Ingredient>;
   selectedIngredient: Ingredient;
 
+  sort: any;
+
   constructor(
     private pizzaService: PizzaService
   ) {
@@ -28,8 +30,12 @@ export class AppComponent implements OnInit {
   ngOnInit(): void {
     this.title = 'Pizza Party Jelly Time';
     this.pizzaService.getPizzas().then((pizzas) => this.pizzas = pizzas);
-    this.user = new User(1, 'John', 'Doe', '1992-12-19', 'john-doe');
+    this.user = new User(1, 'John', 'Doe', '1992-12-19', 'unknown.svg');
     this.pizzaService.getIngredients().then((ingredients) => this.ingredients = ingredients);
+    this.sort = {
+      field: 'name',
+      order: 'asc'
+    };
   }
 
   pizzaSelected(pizza) {
