@@ -1,14 +1,15 @@
-<div *ngIf="pizza" class="card my-3">
-  <img [alt]="pizza.name" [src]="pizza.image" class="card-img-top img-fluid">
-  <div class="card-body">
-    <h5 class="card-title">{{pizza.name}}</h5>
-    <p class="card-text">
-      {{pizza.price | tax | currency}}
-      <app-list-ingredients [ingredients]="pizza.ingredients" [type]="'list'"></app-list-ingredients>
-    </p>
+<div *ngIf="pizza" class="row">
+  <div class="col-md-6 col-sm-12">
+    <img [alt]="pizza.name" [src]="pizza.image" class="img-fluid">
   </div>
-  <div>
+  <div class="col-md-6 col-sm-12">
+    <h3>{{pizza.name}}</h3>
+    <p>{{pizza.price | tax | currency}}</p>
+    <app-list-ingredients [ingredients]="pizza.ingredients" [type]="'list'"></app-list-ingredients>
+
     <button [disabled]="isFirst" [routerLink]="['/pizzas/', pizza.id - 1]" class="button button-primary">Pizza Précédente</button>
     <button [disabled]="isLast" [routerLink]="['/pizzas/', pizza.id + 1]" class="button button-primary">Pizza Suivante</button>
   </div>
 </div>
+
+<input #inputTest type="text">

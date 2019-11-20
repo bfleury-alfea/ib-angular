@@ -21,6 +21,9 @@ import {SortPipe} from './pipes/sort/sort.pipe';
 import {TaxPipe} from './pipes/tax/tax.pipe';
 import {TestPipe} from './pipes/test/test.pipe';
 
+// Services //
+import {PizzaResolverService} from './services/pizza-resolver/pizza-resolver.service';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -50,6 +53,9 @@ import {TestPipe} from './pipes/test/test.pipe';
       {
         path: 'pizzas',
         component: PizzasPageComponent,
+        resolve: {
+          pizzas: PizzaResolverService
+        }
       },
       {
         path: 'pizzas/:id',

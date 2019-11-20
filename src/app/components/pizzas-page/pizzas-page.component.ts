@@ -1,4 +1,5 @@
 import {Component, OnInit} from '@angular/core';
+import {ActivatedRoute} from '@angular/router';
 import {User} from '../../models/user.model';
 import {Pizza} from '../../models/pizza.model';
 import {Ingredient} from '../../models/ingredient.model';
@@ -21,12 +22,20 @@ export class PizzasPageComponent implements OnInit {
   sort: any;
 
   constructor(
-    private pizzaService: PizzaService
+    private pizzaService: PizzaService,
+    private route: ActivatedRoute
   ) {
   }
 
   ngOnInit(): void {
-    this.pizzaService.getPizzas().then((pizzas) => this.pizzas = pizzas);
+    // this.pizzaService.getPizzas().then((pizzas) => this.pizzas = pizzas);
+
+    this.route.data.subscribe((data) => {
+      console.log(data.pizzas);
+      this.pizzas = data.pizzas;
+    });
+
+
     this.user = new User(1, 'John', 'Doe', '1992-12-19', 'unknown.svg');
     this.pizzaService.getIngredients().then((ingredients) => this.ingredients = ingredients);
     this.sort = {

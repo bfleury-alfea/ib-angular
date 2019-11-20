@@ -30,7 +30,7 @@
     </div>
   </div>
   <div class="row">
-    <div *ngFor="let pizza of pizzas | sort:sort.field:sort.order" class="col-3">
+    <div *ngFor="let pizza of pizzas | sort:sort.field:sort.order" class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
       <app-pizza (eventEmitter)="pizzaSelected($event)" [pizza]="pizza" [select]="true"></app-pizza>
     </div>
   </div>

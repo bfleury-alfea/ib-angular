@@ -10,7 +10,7 @@
 
 <div *ngIf="type==='card'">
   <div class="row">
-    <div (click)="onSelect(ingredient)" *ngFor="let ingredient of ingredients" class="card col-sm-2 m-1" style="cursor: pointer">
+    <div (click)="onSelect(ingredient)" *ngFor="let ingredient of ingredients" class="card col-3 col-lg-2 m-1" style="cursor: pointer">
       <img [alt]="ingredient.name" [src]="ingredient.image" class="media-img-top img-fluid mt-3">
       <div class="media-body">
         <h6 class="media-title">{{ingredient.name}}</h6>

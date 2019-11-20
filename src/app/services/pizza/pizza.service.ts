@@ -13,8 +13,14 @@ export class PizzaService {
   constructor() {
   }
 
-  getPizzas(): Promise<Pizza[]> {
+  getPizzas2(): Promise<Pizza[]> {
     return Promise.resolve(PIZZAS);
+  }
+
+  getPizzas(): Promise<Pizza[]> {
+    return new Promise<Pizza[]>((resolve, reject) => {
+      setTimeout(() => resolve(Promise.resolve(PIZZAS)), 1000);
+    });
   }
 
   getPizza(id: number): Promise<Pizza> {

@@ -8,6 +8,6 @@
     </p>
     <button (click)="onSelect(pizza)" *ngIf="select" class="btn btn-primary">Sélectionner</button>
     <button (click)="onSelect(pizza)" *ngIf="!select" class="btn btn-warning">Désélectionner</button>
-    <a [routerLink]="['/pizzas/', pizza.id]" class="btn btn-info">Détails</a>
+    <a [routerLink]="['/pizzas/', pizza.id]" class="btn btn-info" style="float: right">Détails</a>
   </div>
 </div>

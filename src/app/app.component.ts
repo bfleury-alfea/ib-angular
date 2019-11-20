@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {PizzaService} from './services/pizza/pizza.service';
+import {NavigationCancel, NavigationEnd, NavigationError, NavigationStart, Router} from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -9,12 +9,33 @@ import {PizzaService} from './services/pizza/pizza.service';
 export class AppComponent implements OnInit {
   title: string;
 
+  loading: boolean;
+
   constructor(
-    private pizzaService: PizzaService
+    private router: Router
   ) {
   }
 
   ngOnInit(): void {
     this.title = 'Pizza Party Jelly Time';
+
+    this.router.events.subscribe((event) => {
+      switch (true) {
+        case event instanceof NavigationStart: {
+          this.loading = true;
+          break;
+        }
+
+        case event instanceof NavigationEnd:
+        case event instanceof NavigationCancel:
+        case event instanceof NavigationError: {
+          this.loading = false;
+          break;
+        }
+        default: {
+          break;
+        }
+      }
+    });
   }
 }
