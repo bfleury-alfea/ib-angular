@@ -1,10 +1,10 @@
 <div *ngIf="selectedPizza" class="row">
-  <div class="col-md-4 col-sm-12">
+  <div class="col-md-5 col-sm-12">
     <h2>Ma Pizza</h2>
     <app-pizza (eventEmitter)="pizzaDeselected($event)" [pizza]="selectedPizza" [select]="false"></app-pizza>
   </div>
 
-  <div class="col-md-8 col-sm-12">
+  <div class="col-md-7 col-sm-12">
     <h2>Liste Ingrédients</h2>
     <app-list-ingredients (eventEmitter)="ingredientSelected($event)" [ingredients]="ingredients" [type]="'card'"></app-list-ingredients>
   </div>

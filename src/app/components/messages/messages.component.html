@@ -1,4 +1,6 @@
-<div *ngFor="let message of messages" class="alert alert-{{message.type}}">
-  <strong>{{message.value}}</strong>
-  <button (click)="closeAlert(message)" class="close" type="button"><span aria-hidden="true">&times;</span></button>
+<div class="messages-container">
+  <div *ngFor="let message of messages" class="alert alert-{{message.type}}">
+    <strong>{{message.value}}</strong>
+    <button (click)="closeAlert(message)" class="close" type="button"><span aria-hidden="true">&times;</span></button>
+  </div>
 </div>

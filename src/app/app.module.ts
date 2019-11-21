@@ -1,7 +1,6 @@
 import {BrowserModule} from '@angular/platform-browser';
 import {NgModule} from '@angular/core';
 import {FormsModule} from '@angular/forms';
-import {RouterModule} from '@angular/router';
 import {HttpClientModule} from '@angular/common/http';
 import {HttpClientInMemoryWebApiModule} from 'angular-in-memory-web-api';
 // Components //
@@ -13,6 +12,7 @@ import {ListIngredientsComponent} from './components/list-ingredients/list-ingre
 import {MenuComponent} from './components/menu/menu.component';
 import {MessagesComponent} from './components/messages/messages.component';
 import {PizzaComponent} from './components/pizza/pizza.component';
+import {PizzaFormPageComponent} from './components/pizza-form-page/pizza-form-page.component';
 import {PizzaPageComponent} from './components/pizza-page/pizza-page.component';
 import {PizzasPageComponent} from './components/pizzas-page/pizzas-page.component';
 // Directives //
@@ -27,7 +27,6 @@ import {SortPipe} from './pipes/sort/sort.pipe';
 import {TaxPipe} from './pipes/tax/tax.pipe';
 import {TestPipe} from './pipes/test/test.pipe';
 // Services //
-import {PizzaResolverService} from './services/pizza-resolver/pizza-resolver.service';
 import {FakeApiService} from './services/fake-api.service';
 
 @NgModule({
@@ -52,6 +51,7 @@ import {FakeApiService} from './services/fake-api.service';
     SortPipe,
     TaxPipe,
     TestPipe,
+    PizzaFormPageComponent,
   ],
   imports: [
     BrowserModule,
@@ -59,23 +59,6 @@ import {FakeApiService} from './services/fake-api.service';
     HttpClientModule,
     HttpClientInMemoryWebApiModule.forRoot(FakeApiService),
     AppRoutingModule,
-    RouterModule.forRoot([
-      {
-        path: '',
-        component: HomePageComponent
-      },
-      {
-        path: 'pizzas',
-        component: PizzasPageComponent,
-        resolve: {
-          pizzas: PizzaResolverService
-        }
-      },
-      {
-        path: 'pizzas/:id',
-        component: PizzaPageComponent,
-      },
-    ])
   ],
   providers: [],
   bootstrap: [AppComponent]

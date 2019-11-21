@@ -34,8 +34,15 @@ export class PizzaComponent implements OnInit {
   }
 
   save() {
-    this.pizzaService.update(this.pizza).then((pizza) => {
+    this.pizzaService.updatePizza(this.pizza).then((pizza) => {
       this.messagesService.addMessage('Pizza saved');
     });
+  }
+
+  delete() {
+    this.pizzaService.deletePizza(this.pizza).then((pizza) => {
+      this.messagesService.addMessage('Pizza deleted');
+    });
+    this.eventEmitter.emit(null);
   }
 }

@@ -12,6 +12,16 @@ export class MessagesService {
   constructor() {
     this.messages = [];
     this.currentId = 0;
+
+    const maxLifespan = 5000;
+    // check once per second
+    setInterval(() => {
+      this.messages.forEach((item) => {
+        if (Date.now() - maxLifespan > item.createdAt) {
+          this.messages.shift();
+        }
+      });
+    }, 1000);
   }
 
   getMessages(): Promise<Message[]> {

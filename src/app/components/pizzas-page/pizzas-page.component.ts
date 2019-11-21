@@ -51,6 +51,10 @@ export class PizzasPageComponent implements OnInit {
   }
 
   pizzaDeselected(pizza) {
+    if (pizza === null) {
+      this.pizzaService.getPizzas().then((pizzas) => this.pizzas = pizzas);
+    }
+
     if (this.selectedPizza) {
       this.selectedPizza.ingredients = [];
     }
@@ -63,5 +67,4 @@ export class PizzasPageComponent implements OnInit {
       this.selectedPizza.ingredients.push(this.selectedIngredient);
     }
   }
-
 }

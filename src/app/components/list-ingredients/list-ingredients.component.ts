@@ -1,7 +1,6 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {Ingredient} from '../../models/ingredient.model';
 import {MessagesService} from '../../services/messages/messages.service';
-import {Pizza} from '../../models/pizza.model';
 
 @Component({
   selector: 'app-list-ingredients',

@@ -1,0 +1,435 @@
+{
+  "pizzas" : [
+    {
+      "id": 1,
+      "name": "4 Fromages",
+      "price": 7,
+      "image": "4-fromages.png"},
+
+    {
+      "id": 2,
+      "name": "Bacon Groovy",
+      "price": 7,
+      "image": "bacon-groovy.png"},
+
+    {
+      "id": 3,
+      "name": "Bellachô",
+      "price": 7,
+      "image": "bellacho.png"},
+
+    {
+      "id": 4,
+      "name": "Cannibale",
+      "price": 7,
+      "image": "cannibale.png"},
+
+    {
+      "id": 5,
+      "name": "Chickenita Pepperoni",
+      "price": 7,
+      "image": "chickenita-pepperoni.png"},
+
+    {
+      "id": 6,
+      "name": "Classique Jambon",
+      "price": 6,
+      "image": "classique-jambon.png"},
+
+    {
+      "id": 7,
+      "name": "Deluxe",
+      "price": 7,
+      "image": "deluxe.png"},
+
+    {
+      "id": 8,
+      "name": "Diavola",
+      "price": 7,
+      "image": "diavola.png"},
+
+    {
+      "id": 9,
+      "name": "Diavola Pepperoni",
+      "price": 7,
+      "image": "diavola-pepperoni.png"},
+
+    {
+      "id": 10,
+      "name": "Extravaganzza",
+      "price": 7,
+      "image": "extravaganzza.png"},
+
+    {
+      "id": 11,
+      "name": "Figue - Chèvre",
+      "price": 11.5,
+      "image": "figue-chevre.png"},
+
+    {
+      "id": 12,
+      "name": "Forestière",
+      "price": 7,
+      "image": "forestiere.png"},
+
+    {
+      "id": 13,
+      "name": "Hawaïenne Jambon",
+      "price": 7,
+      "image": "hawaienne-jambon.png"},
+
+    {
+      "id": 14,
+      "name": "Hawaïenne Poulet",
+      "price": 7,
+      "image": "hawaienne-poulet.png"},
+
+    {
+      "id": 15,
+      "name": "Hypnotika",
+      "price": 7,
+      "image": "hypnotika.png"},
+
+    {
+      "id": 16,
+      "name": "Indienne",
+      "price": 7,
+      "image": "indienne.png"},
+
+    {
+      "id": 17,
+      "name": "Margherita",
+      "price": 6,
+      "image": "margherita.png"},
+
+    {
+      "id": 18,
+      "name": "Orientale",
+      "price": 7,
+      "image": "orientale.png"},
+
+    {
+      "id": 19,
+      "name": "Originale Pepperoni",
+      "price": 6,
+      "image": "originale-pepperoni.png"},
+
+    {
+      "id": 20,
+      "name": "Pêcheur",
+      "price": 7,
+      "image": "pecheur.png"},
+
+    {
+      "id": 21,
+      "name": "Pepper Beef",
+      "price": 7,
+      "image": "pepper-beef.png"},
+
+    {
+      "id": 22,
+      "name": "Peppina",
+      "price": 7,
+      "image": "peppina.png"},
+
+    {
+      "id": 23,
+      "name": "Reine",
+      "price": 7,
+      "image": "reine.png"},
+
+    {
+      "id": 24,
+      "name": "Saumon",
+      "price": 11.5,
+      "image": "saumon.png"},
+
+    {
+      "id": 25,
+      "name": "Savoyarde",
+      "price": 7,
+      "image": "savoyarde.png"},
+
+    {
+      "id": 26,
+      "name": "Spéciale Merguez",
+      "price": 6,
+      "image": "speciale-merguez.png"},
+
+    {
+      "id": 27,
+      "name": "Spicy Dallas Burger",
+      "price": 11.5,
+      "image": "spicy-dallas-burger.png"},
+
+    {
+      "id": 28,
+      "name": "Steak & Cheese",
+      "price": 7,
+      "image": "steak-cheese.png"},
+
+    {
+      "id": 29,
+      "name": "Texas Grill",
+      "price": 7,
+      "image": "texas-grill.png"},
+
+    {
+      "id": 30,
+      "name": "Urban Kebab",
+      "price": 7,
+      "image": "urban-kebab.png"},
+
+    {
+      "id": 31,
+      "name": "Vegan Margherita",
+      "price": 6,
+      "image": "vegan-margherita.png"},
+
+    {
+      "id": 32,
+      "name": "Vegan Peppina",
+      "price": 7,
+      "image": "vegan-peppina.png"}
+  ],
+  "ingredients": [
+    {
+      "id": 1,
+      "name": "Ananas",
+      "weight": 1,
+      "price": 1.5,
+      "image": "ananas.png"
+    },
+    {
+      "id": 2,
+      "name": "Assaisonnement aux poivres",
+      "weight": 2,
+      "price": 0.5,
+      "image": "assaisonnement-aux-poivres.png"
+    },
+    {
+      "id": 3,
+      "name": "Bacon",
+      "weight": 3,
+      "price": 2,
+      "image": "bacon.png"
+    },
+    {
+      "id": 4,
+      "name": "Boulettes de bœuf assaisonnées",
+      "weight": 4,
+      "price": 1.5,
+      "image": "boulettes-de-boeuf-assaisonnees.png"
+    },
+    {
+      "id": 5,
+      "name": "Champignons",
+      "weight": 5,
+      "price": 1.5,
+      "image": "champignons.png"
+    },
+    {
+      "id": 6,
+      "name": "Chèvre",
+      "weight": 6,
+      "price": 2,
+      "image": "chevre.jpg"
+    },
+    {
+      "id": 7,
+      "name": "Chorizo",
+      "weight": 1,
+      "price": 1.5,
+      "image": "chorizo.png"
+    },
+    {
+      "id": 8,
+      "name": "Crème fraîche",
+      "weight": 2,
+      "price": 1.5,
+      "image": "creme-fraiche.png"
+    },
+    {
+      "id": 9,
+      "name": "Emmental",
+      "weight": 3,
+      "price": 1.5,
+      "image": "emmental.png"
+    },
+    {
+      "id": 10,
+      "name": "Figues séchées",
+      "weight": 4,
+      "price": 2,
+      "image": "figues-sechees.png"
+    },
+    {
+      "id": 11,
+      "name": "Fournes d'Ambert",
+      "weight": 5,
+      "price": 1.5,
+      "image": "fournes-d-ambert.png"
+    },
+    {
+      "id": 12,
+      "name": "Jambon",
+      "weight": 6,
+      "price": 1.5,
+      "image": "jambon.png"
+    },
+    {
+      "id": 13,
+      "name": "Lardons",
+      "weight": 1,
+      "price": 1.5,
+      "image": "lardons.png"
+    },
+    {
+      "id": 14,
+      "name": "Merguez",
+      "weight": 2,
+      "price": 1.5,
+      "image": "merguez.png"
+    },
+    {
+      "id": 15,
+      "name": "Miel",
+      "weight": 3,
+      "price": 1.5,
+      "image": "miel.png"
+    },
+    {
+      "id": 16,
+      "name": "Mozzarella",
+      "weight": 4,
+      "price": 1.5,
+      "image": "mozzarella.png"
+    },
+    {
+      "id": 17,
+      "name": "Oignons",
+      "weight": 5,
+      "price": 1.5,
+      "image": "oignons.png"
+    },
+    {
+      "id": 18,
+      "name": "Olives noires",
+      "weight": 6,
+      "price": 1.5,
+      "image": "olives-noires.png"
+    },
+    {
+      "id": 19,
+      "name": "Origan",
+      "weight": 1,
+      "price": 0,
+      "image": "origan.png"
+    },
+    {
+      "id": 20,
+      "name": "Pepperoni Tranché",
+      "weight": 2,
+      "price": 1.5,
+      "image": "pepperoni-tranche.png"
+    },
+    {
+      "id": 21,
+      "name": "Piments jalapeños",
+      "weight": 3,
+      "price": 1.5,
+      "image": "piments-jalapenos.jpg"
+    },
+    {
+      "id": 22,
+      "name": "Poivrons mélangés",
+      "weight": 4,
+      "price": 1.5,
+      "image": "poivrons-melanges.jpg"
+    },
+    {
+      "id": 23,
+      "name": "Pomme de Terre",
+      "weight": 5,
+      "price": 1.5,
+      "image": "pomme-de-terre.jpg"
+    },
+    {
+      "id": 24,
+      "name": "Poulet Rôti",
+      "weight": 6,
+      "price": 1.5,
+      "image": "poulet-roti.png"
+    },
+    {
+      "id": 25,
+      "name": "Roblochon",
+      "weight": 1,
+      "price": 2,
+      "image": "roblochon.png"
+    },
+    {
+      "id": 26,
+      "name": "Sauce BBQ",
+      "weight": 2,
+      "price": 1.5,
+      "image": "sauce-bbq.png"
+    },
+    {
+      "id": 27,
+      "name": "Sauce Dallas",
+      "weight": 3,
+      "price": 1.5,
+      "image": "sauce-dallas.jpg"
+    },
+    {
+      "id": 28,
+      "name": "Sauce Echalote et Aneth",
+      "weight": 4,
+      "price": 1.5,
+      "image": "sauce-echalote-et-aneth.png"
+    },
+    {
+      "id": 29,
+      "name": "Sauce Kebab",
+      "weight": 5,
+      "price": 1.5,
+      "image": "sauce-kebab.png"
+    },
+    {
+      "id": 30,
+      "name": "Sauce Texas Grill",
+      "weight": 6,
+      "price": 1.5,
+      "image": "sauce-texas-grill.png"
+    },
+    {
+      "id": 31,
+      "name": "Saumon",
+      "weight": 1,
+      "price": 2.5,
+      "image": "saumon.png"
+    },
+    {
+      "id": 32,
+      "name": "Thon",
+      "weight": 2,
+      "price": 1.5,
+      "image": "thon.png"
+    },
+    {
+      "id": 33,
+      "name": "Tomates Fraîches",
+      "weight": 3,
+      "price": 1.5,
+      "image": "tomates-fraiches.png"
+    },
+    {
+      "id": 34,
+      "name": "Viande Kebab",
+      "weight": 4,
+      "price": 1.5,
+      "image": "viande-kebab.png"
+    }
+  ]
+}

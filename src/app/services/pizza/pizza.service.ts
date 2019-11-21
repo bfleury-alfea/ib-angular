@@ -1,8 +1,5 @@
 import {Injectable} from '@angular/core';
-import {PIZZAS} from '../../mocks/pizzas.mock';
-import {INGREDIENTS} from '../../mocks/ingredients.mock';
 import {Pizza} from '../../models/pizza.model';
-import {Ingredient} from '../../models/ingredient.model';
 import * as _ from 'lodash';
 import {HttpClient} from '@angular/common/http';
 
@@ -10,18 +7,20 @@ import {HttpClient} from '@angular/common/http';
   providedIn: 'root'
 })
 export class PizzaService {
+  private URL: string;
 
   constructor(
     private http: HttpClient
   ) {
+    this.URL = 'http://localhost:3000/';
   }
 
   getPizzas(): Promise<Pizza[]> {
-    return this.http.get('/api/pizzas').toPromise().then((response) => response as Pizza[]);
+    return this.http.get(this.URL + 'pizzas').toPromise().then((response) => response as Pizza[]);
   }
 
   getPizza(id: number): Promise<Pizza> {
-    return this.http.get('/api/pizzas/' + id).toPromise().then((response) => response as Pizza);
+    return this.http.get(this.URL + 'pizzas/' + id).toPromise().then((response) => response as Pizza);
   }
 
   getMinPizzaId(): Promise<number> {
@@ -38,13 +37,20 @@ export class PizzaService {
     });
   }
 
-  getIngredients(): Promise<Ingredient[]> {
-    return this.http.get('/api/ingredients').toPromise().then((response) => response as Ingredient[]);
+  createPizza(pizza: Pizza): Promise<Pizza> {
+    return this.getMaxPizzaId().then((max) => {
+      pizza.id = max + 1;
+      pizza.image = '/assets/pizza/' + pizza.image;
+
+      return this.http.post(this.URL + 'pizzas', pizza).toPromise().then((response) => response as Pizza);
+    });
   }
 
-  update(pizza: Pizza): Promise<Pizza> {
-    return this.http.put('/api/pizzas/' + pizza.id, pizza).toPromise().then((pizza: Pizza) => {
-      return pizza;
-    });
+  updatePizza(pizza: Pizza): Promise<Pizza> {
+    return this.http.put(this.URL + 'pizzas/' + pizza.id, pizza).toPromise().then((response) => response as Pizza);
+  }
+
+  deletePizza(pizza: Pizza): Promise<Pizza> {
+    return this.http.delete(this.URL + 'pizzas/' + pizza.id).toPromise().then((response) => response as Pizza);
   }
 }

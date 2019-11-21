@@ -7,10 +7,16 @@
       {{pizza.price | tax | currency}}
       <app-list-ingredients [ingredients]="pizza.ingredients" [type]="'list'"></app-list-ingredients>
     </p>
-    <button (click)="onSelect(pizza)" *ngIf="select" class="btn btn-primary">Sélectionner</button>
-    <a *ngIf="select" [routerLink]="['/pizzas/', pizza.id]" class="btn btn-info" style="float: right">Détails</a>
+    <div style="text-align: center">
+      <button (click)="onSelect(pizza)" *ngIf="select" class="btn btn-primary">Sélectionner</button>
+      &nbsp;
+      <a *ngIf="select" [routerLink]="['/pizzas/', pizza.id]" class="btn btn-info">Détails</a>
 
-    <button (click)="onSelect(pizza)" *ngIf="!select" class="btn btn-warning">Désélectionner</button>
-    <button (click)="save()" *ngIf="!select" class="btn btn-primary" style="float: right">Modifier</button>
+      <button (click)="onSelect(pizza)" *ngIf="!select" class="btn btn-warning">Désélectionner</button>
+      &nbsp;
+      <button (click)="save()" *ngIf="!select" class="btn btn-primary">Modifier</button>
+      &nbsp;
+      <button (click)="delete()" *ngIf="!select" class="btn btn-danger">Supprimer</button>
+    </div>
   </div>
 </div>
