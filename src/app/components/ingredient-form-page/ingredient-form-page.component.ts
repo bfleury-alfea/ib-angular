@@ -1,7 +1,8 @@
 import {Component, OnInit} from '@angular/core';
-import {IngredientService} from '../../services/ingredient/ingredient.service';
-import {Router} from '@angular/router';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
+import {Router} from '@angular/router';
+import {IngredientService} from '../../services/ingredient/ingredient.service';
+import {ingredientExists} from '../../validators/ingredient-exists';
 
 @Component({
   selector: 'app-ingredient-form-page',
@@ -17,7 +18,7 @@ export class IngredientFormPageComponent implements OnInit {
     fb: FormBuilder
   ) {
     this.ingredientForm = fb.group({
-      name: fb.control('', [Validators.required, Validators.minLength(5)]),
+      name: fb.control('', [Validators.required, Validators.minLength(5)], [ingredientExists(ingredientService)]),
       price: fb.control(0, [Validators.required]),
       weight: fb.control(0, [Validators.required]),
       image: fb.control('', [])

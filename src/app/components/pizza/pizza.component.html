@@ -1,10 +1,12 @@
 <div *ngIf="pizza" class="card my-3">
   <img [alt]="pizza.name" [src]="pizza.image" class="card-img-top img-fluid">
   <div class="card-body">
-    <h5 *ngIf="select" class="card-title">{{pizza.name}}</h5>
-    <label *ngIf="!select">Pizza name : <input [(ngModel)]="pizza.name" class="card-title"></label>
+    <h5 *ngIf="!edit" class="card-title">{{pizza.name}}</h5>
+    <label *ngIf="edit">Name : <input [(ngModel)]="pizza.name" class="card-title"></label>
     <p class="card-text">
-      {{pizza.price | tax | currency}}
+      <span *ngIf="!edit">{{pizza.price | tax | currency}}</span>
+      <label *ngIf="edit">Price : <input [(ngModel)]="pizza.price"></label>
+
       <app-list-ingredients [ingredients]="pizza.ingredients" [type]="'list'"></app-list-ingredients>
     </p>
 
@@ -15,7 +17,8 @@
 
       <button (click)="onSelect(pizza)" *ngIf="!select" class="btn btn-warning">Désélectionner</button>
       &nbsp;
-      <button (click)="save()" *ngIf="!select" class="btn btn-primary">Modifier</button>
+      <button (click)="editPizza()" *ngIf="!edit && !select" class="btn btn-primary">Modifier</button>
+      <button (click)="save()" *ngIf="edit && !select" class="btn btn-primary">Modifier</button>
       &nbsp;
       <button (click)="delete()" *ngIf="!select" class="btn btn-danger">Supprimer</button>
     </div>

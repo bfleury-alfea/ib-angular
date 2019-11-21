@@ -3,7 +3,7 @@ import {HttpClient} from '@angular/common/http';
 import {Ingredient} from '../../models/ingredient.model';
 import * as _ from 'lodash';
 import {Observable} from 'rxjs';
-import {flatMap, map} from 'rxjs/operators';
+import {delay, flatMap, map} from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
@@ -23,6 +23,10 @@ export class IngredientService {
 
   getIngredient(id: number): Observable<Ingredient> {
     return this.http.get(this.URL + 'ingredients/' + id).pipe(map((response) => response as Ingredient));
+  }
+
+  getIngredientExists(name: string): Observable<boolean> {
+    return this.http.get(this.URL + 'ingredients?name=' + name).pipe(map((response: any[]) => (response.length !== 0)), delay(2000));
   }
 
   getMinIngredientId(): Observable<number> {

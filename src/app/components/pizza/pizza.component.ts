@@ -12,6 +12,7 @@ export class PizzaComponent implements OnInit {
   @Input() pizza: Pizza;
   @Input() select: boolean;
   @Output() eventEmitter: EventEmitter<Pizza>;
+  edit: boolean;
 
   constructor(
     private messagesService: MessagesService,
@@ -21,6 +22,7 @@ export class PizzaComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.edit = false;
   }
 
   onSelect(event) {
@@ -32,9 +34,14 @@ export class PizzaComponent implements OnInit {
     }
   }
 
+  editPizza() {
+    this.edit = true;
+  }
+
   save() {
     this.pizzaService.updatePizza(this.pizza).then((pizza) => {
       this.messagesService.addMessage('Pizza saved');
+      this.edit = false;
     });
   }
 

@@ -34,7 +34,7 @@
     </div>
 
     <div style="text-align: center">
-      <button [class.btn-primary]="ingredientForm.valid" [class.btn-secondary]="ingredientForm.invalid" [disabled]="ingredientForm.invalid" class="btn">Créer l'ingrédient</button>
+      <button [class.btn-primary]="ingredientForm.valid" [class.btn-secondary]="!ingredientForm.valid" [disabled]="!ingredientForm.valid" class="btn">Créer l'ingrédient</button>
       &nbsp;
       <button class="btn btn-danger" routerLink="/ingredients">Annuler</button>
     </div>
