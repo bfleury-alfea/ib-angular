@@ -57,7 +57,6 @@ import {FakeApiService} from './services/fake-api.service';
     BrowserModule,
     FormsModule,
     HttpClientModule,
-    HttpClientInMemoryWebApiModule.forRoot(FakeApiService),
     AppRoutingModule,
   ],
   providers: [],

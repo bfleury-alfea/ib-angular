@@ -4,6 +4,7 @@ import {User} from '../../models/user.model';
 import {Pizza} from '../../models/pizza.model';
 import {Ingredient} from '../../models/ingredient.model';
 import {PizzaService} from '../../services/pizza/pizza.service';
+import {IngredientService} from '../../services/ingredient/ingredient.service';
 
 @Component({
   selector: 'app-pizzas',
@@ -23,6 +24,7 @@ export class PizzasPageComponent implements OnInit {
 
   constructor(
     private pizzaService: PizzaService,
+    private ingredientService: IngredientService,
     private route: ActivatedRoute
   ) {
   }
@@ -36,7 +38,7 @@ export class PizzasPageComponent implements OnInit {
 
 
     this.user = new User(1, 'John', 'Doe', '1992-12-19', 'unknown.svg');
-    this.pizzaService.getIngredients().then((ingredients) => this.ingredients = ingredients);
+    this.ingredientService.getIngredients().subscribe((ingredients) => this.ingredients = ingredients);
     this.sort = {
       field: 'name',
       order: 'asc'
