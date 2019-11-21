@@ -2,8 +2,11 @@ import {BrowserModule} from '@angular/platform-browser';
 import {NgModule} from '@angular/core';
 import {FormsModule} from '@angular/forms';
 import {RouterModule} from '@angular/router';
+import {HttpClientModule} from '@angular/common/http';
+import {HttpClientInMemoryWebApiModule} from 'angular-in-memory-web-api';
 // Components //
 import {AppComponent} from './app.component';
+import {AppRoutingModule} from './app-routing.module';
 import {AuthorComponent} from './components/author/author.component';
 import {HomePageComponent} from './components/home-page/home-page.component';
 import {ListIngredientsComponent} from './components/list-ingredients/list-ingredients.component';
@@ -25,6 +28,7 @@ import {TaxPipe} from './pipes/tax/tax.pipe';
 import {TestPipe} from './pipes/test/test.pipe';
 // Services //
 import {PizzaResolverService} from './services/pizza-resolver/pizza-resolver.service';
+import {FakeApiService} from './services/fake-api.service';
 
 @NgModule({
   declarations: [
@@ -52,6 +56,9 @@ import {PizzaResolverService} from './services/pizza-resolver/pizza-resolver.ser
   imports: [
     BrowserModule,
     FormsModule,
+    HttpClientModule,
+    HttpClientInMemoryWebApiModule.forRoot(FakeApiService),
+    AppRoutingModule,
     RouterModule.forRoot([
       {
         path: '',

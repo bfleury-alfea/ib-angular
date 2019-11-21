@@ -1,13 +1,16 @@
 <div *ngIf="pizza" class="card my-3">
   <img [alt]="pizza.name" [src]="pizza.image" class="card-img-top img-fluid">
   <div class="card-body">
-    <h5 class="card-title">{{pizza.name}}</h5>
+    <h5 *ngIf="select" class="card-title">{{pizza.name}}</h5>
+    <label *ngIf="!select">Pizza name : <input [(ngModel)]="pizza.name" class="card-title"></label>
     <p class="card-text">
       {{pizza.price | tax | currency}}
       <app-list-ingredients [ingredients]="pizza.ingredients" [type]="'list'"></app-list-ingredients>
     </p>
     <button (click)="onSelect(pizza)" *ngIf="select" class="btn btn-primary">Sélectionner</button>
+    <a *ngIf="select" [routerLink]="['/pizzas/', pizza.id]" class="btn btn-info" style="float: right">Détails</a>
+
     <button (click)="onSelect(pizza)" *ngIf="!select" class="btn btn-warning">Désélectionner</button>
-    <a [routerLink]="['/pizzas/', pizza.id]" class="btn btn-info" style="float: right">Détails</a>
+    <button (click)="save()" *ngIf="!select" class="btn btn-primary" style="float: right">Modifier</button>
   </div>
 </div>

@@ -7,13 +7,13 @@ import {PizzaService} from '../pizza/pizza.service';
 @Injectable({
   providedIn: 'root'
 })
-export class PizzaResolverService implements Resolve<Array<Pizza>> {
+export class PizzaResolverService implements Resolve<Pizza[]> {
 
   constructor(
     private pizzaService: PizzaService
   ) { }
 
-  resolve(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): Observable<Array<Pizza>> | Promise<Array<Pizza>> | Array<Pizza> {
+  resolve(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): Observable<Pizza[]> | Promise<Pizza[]> | Pizza[] {
     return this.pizzaService.getPizzas();
   }
 }

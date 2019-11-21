@@ -4,29 +4,24 @@ import {INGREDIENTS} from '../../mocks/ingredients.mock';
 import {Pizza} from '../../models/pizza.model';
 import {Ingredient} from '../../models/ingredient.model';
 import * as _ from 'lodash';
+import {HttpClient} from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
 })
 export class PizzaService {
 
-  constructor() {
-  }
-
-  getPizzas2(): Promise<Pizza[]> {
-    return Promise.resolve(PIZZAS);
+  constructor(
+    private http: HttpClient
+  ) {
   }
 
   getPizzas(): Promise<Pizza[]> {
-    return new Promise<Pizza[]>((resolve, reject) => {
-      setTimeout(() => resolve(Promise.resolve(PIZZAS)), 1000);
-    });
+    return this.http.get('/api/pizzas').toPromise().then((response) => response as Pizza[]);
   }
 
   getPizza(id: number): Promise<Pizza> {
-    return this.getPizzas().then(
-      pizzas => pizzas.find((p) => p.id === id)
-    );
+    return this.http.get('/api/pizzas/' + id).toPromise().then((response) => response as Pizza);
   }
 
   getMinPizzaId(): Promise<number> {
@@ -44,6 +39,12 @@ export class PizzaService {
   }
 
   getIngredients(): Promise<Ingredient[]> {
-    return Promise.resolve(INGREDIENTS);
+    return this.http.get('/api/ingredients').toPromise().then((response) => response as Ingredient[]);
+  }
+
+  update(pizza: Pizza): Promise<Pizza> {
+    return this.http.put('/api/pizzas/' + pizza.id, pizza).toPromise().then((pizza: Pizza) => {
+      return pizza;
+    });
   }
 }

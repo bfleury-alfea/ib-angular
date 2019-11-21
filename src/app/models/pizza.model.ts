@@ -5,7 +5,7 @@ export class Pizza {
   name: string;
   price: number;
   image?: string;
-  ingredients: Array<Ingredient>;
+  ingredients: Ingredient[];
 
   constructor(id, name, price, image?, ingredients?) {
     this.id = id;

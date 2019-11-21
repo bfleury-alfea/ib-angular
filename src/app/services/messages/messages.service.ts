@@ -6,7 +6,7 @@ import {Message} from '../../models/message.model';
 })
 export class MessagesService {
 
-  messages: Array<Message>;
+  messages: Message[];
   currentId: number;
 
   constructor() {
@@ -14,11 +14,11 @@ export class MessagesService {
     this.currentId = 0;
   }
 
-  getMessages(): Promise<Array<Message>> {
+  getMessages(): Promise<Message[]> {
     return Promise.resolve(this.messages);
   }
 
-  addMessage(value: string, type: string) {
+  addMessage(value: string, type: string = 'primary') {
     const message = new Message(++this.currentId, value, type);
     this.messages.push(message);
   }

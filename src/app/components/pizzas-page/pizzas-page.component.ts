@@ -16,7 +16,7 @@ export class PizzasPageComponent implements OnInit {
 
   user: User;
 
-  ingredients: Array<Ingredient>;
+  ingredients: Ingredient[];
   selectedIngredient: Ingredient;
 
   sort: any;

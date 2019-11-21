@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {Message} from '../../models/message.model';
 import {MessagesService} from '../../services/messages/messages.service';
+import {Pizza} from '../../models/pizza.model';
 
 @Component({
   selector: 'app-messages',
@@ -9,7 +10,7 @@ import {MessagesService} from '../../services/messages/messages.service';
 })
 export class MessagesComponent implements OnInit {
 
-  messages: Array<Message>;
+  messages: Message[];
 
   constructor(private messagesService: MessagesService) {
   }

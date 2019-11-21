@@ -2,6 +2,7 @@ import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 
 import {Pizza} from '../../models/pizza.model';
 import {MessagesService} from '../../services/messages/messages.service';
+import {PizzaService} from '../../services/pizza/pizza.service';
 
 @Component({
   selector: 'app-pizza',
@@ -14,7 +15,8 @@ export class PizzaComponent implements OnInit {
   @Output() eventEmitter: EventEmitter<Pizza>;
 
   constructor(
-    private messagesService: MessagesService
+    private messagesService: MessagesService,
+    private pizzaService: PizzaService
   ) {
     this.eventEmitter = new EventEmitter();
   }
@@ -29,5 +31,11 @@ export class PizzaComponent implements OnInit {
     } else {
       this.messagesService.addMessage(`La pizza '${this.pizza.name}' a été déselectionnée`, 'danger');
     }
+  }
+
+  save() {
+    this.pizzaService.update(this.pizza).then((pizza) => {
+      this.messagesService.addMessage('Pizza saved');
+    });
   }
 }

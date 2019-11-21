@@ -1,6 +1,7 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {Ingredient} from '../../models/ingredient.model';
 import {MessagesService} from '../../services/messages/messages.service';
+import {Pizza} from '../../models/pizza.model';
 
 @Component({
   selector: 'app-list-ingredients',
@@ -8,7 +9,7 @@ import {MessagesService} from '../../services/messages/messages.service';
   styleUrls: ['./list-ingredients.component.scss']
 })
 export class ListIngredientsComponent implements OnInit {
-  @Input() ingredients: Array<Ingredient>;
+  @Input() ingredients: Ingredient[];
   @Input() type: string;
   @Output() eventEmitter: EventEmitter<Ingredient>;
 
