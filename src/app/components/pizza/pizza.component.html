@@ -7,6 +7,7 @@
       {{pizza.price | tax | currency}}
       <app-list-ingredients [ingredients]="pizza.ingredients" [type]="'list'"></app-list-ingredients>
     </p>
+
     <div style="text-align: center">
       <button (click)="onSelect(pizza)" *ngIf="select" class="btn btn-primary">Sélectionner</button>
       &nbsp;

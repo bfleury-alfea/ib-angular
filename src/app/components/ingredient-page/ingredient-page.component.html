@@ -1,0 +1,13 @@
+<div *ngIf="ingredient" class="row">
+  <div class="col-md-6 col-sm-12">
+    <img [alt]="ingredient.name" [src]="ingredient.image" class="img-fluid">
+  </div>
+  <div class="col-md-6 col-sm-12">
+    <h3>{{ingredient.name}}</h3>
+    <p>{{ingredient.price | tax | currency}}</p>
+    <p>{{ingredient.weight}}</p>
+
+    <button [disabled]="isFirst" [routerLink]="['/ingredients/', ingredient.id - 1]" class="button button-primary">Ingrédient Précédente</button>
+    <button [disabled]="isLast" [routerLink]="['/ingredients/', ingredient.id + 1]" class="button button-primary">Ingrédient Suivante</button>
+  </div>
+</div>

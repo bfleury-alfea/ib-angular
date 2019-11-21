@@ -1,13 +1,15 @@
 import {BrowserModule} from '@angular/platform-browser';
 import {NgModule} from '@angular/core';
-import {FormsModule} from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
-import {HttpClientInMemoryWebApiModule} from 'angular-in-memory-web-api';
 // Components //
 import {AppComponent} from './app.component';
 import {AppRoutingModule} from './app-routing.module';
 import {AuthorComponent} from './components/author/author.component';
 import {HomePageComponent} from './components/home-page/home-page.component';
+import {IngredientFormPageComponent} from './components/ingredient-form-page/ingredient-form-page.component';
+import {IngredientPageComponent} from './components/ingredient-page/ingredient-page.component';
+import {IngredientsPageComponent} from './components/ingredients-page/ingredients-page.component';
 import {ListIngredientsComponent} from './components/list-ingredients/list-ingredients.component';
 import {MenuComponent} from './components/menu/menu.component';
 import {MessagesComponent} from './components/messages/messages.component';
@@ -26,18 +28,22 @@ import {CurrencyPipe} from './pipes/currency/currency.pipe';
 import {SortPipe} from './pipes/sort/sort.pipe';
 import {TaxPipe} from './pipes/tax/tax.pipe';
 import {TestPipe} from './pipes/test/test.pipe';
-// Services //
-import {FakeApiService} from './services/fake-api.service';
+import {IngredientComponent} from './components/ingredient/ingredient.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     AuthorComponent,
     HomePageComponent,
+    IngredientComponent,
+    IngredientFormPageComponent,
+    IngredientPageComponent,
+    IngredientsPageComponent,
     ListIngredientsComponent,
     MenuComponent,
     MessagesComponent,
     PizzaComponent,
+    PizzaFormPageComponent,
     PizzaPageComponent,
     PizzasPageComponent,
 
@@ -51,13 +57,13 @@ import {FakeApiService} from './services/fake-api.service';
     SortPipe,
     TaxPipe,
     TestPipe,
-    PizzaFormPageComponent,
   ],
   imports: [
+    AppRoutingModule,
     BrowserModule,
     FormsModule,
     HttpClientModule,
-    AppRoutingModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

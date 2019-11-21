@@ -1,0 +1,33 @@
+<div *ngIf="selectedIngredient" class="row">
+  <div class="col-md-5 col-sm-12">
+    <h2>Mon Ingredient</h2>
+    <app-ingredient (eventEmitter)="ingredientDeselected($event)" [ingredient]="selectedIngredient" [select]="false"></app-ingredient>
+  </div>
+</div>
+
+<div class="col-12 my-5">
+  <h2>Menu Ingrédients</h2>
+  <div class="row">
+    <div class="form-group col-md-6 col-sm-12">
+      <label class="col-form-label" for="sort-field">Tri par :</label>
+      <select [(ngModel)]="sort.field" class="form-control" id="sort-field">
+        <option value="name">Nom</option>
+        <option value="price">Prix</option>
+        <option value="weight">Poids</option>
+      </select>
+    </div>
+
+    <div class="form-group col-md-6 col-sm-12">
+      <label class="col-form-label" for="sort-order">Ordre : </label>
+      <select [(ngModel)]="sort.order" class="form-control" id="sort-order">
+        <option value="asc">Ascendant</option>
+        <option value="desc">Descendant</option>
+      </select>
+    </div>
+  </div>
+  <div class="row">
+    <div *ngFor="let ingredient of ingredients | sort:sort.field:sort.order" class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+      <app-ingredient (eventEmitter)="ingredientSelected($event)" [ingredient]="ingredient" [select]="true"></app-ingredient>
+    </div>
+  </div>
+</div>

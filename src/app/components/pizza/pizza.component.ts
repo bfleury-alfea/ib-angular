@@ -1,5 +1,4 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
-
 import {Pizza} from '../../models/pizza.model';
 import {MessagesService} from '../../services/messages/messages.service';
 import {PizzaService} from '../../services/pizza/pizza.service';

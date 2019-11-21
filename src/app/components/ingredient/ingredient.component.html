@@ -1,0 +1,23 @@
+<div *ngIf="ingredient" class="card my-3">
+  <img [alt]="ingredient.name" [src]="ingredient.image" class="card-img-top img-fluid">
+  <div class="card-body">
+    <h5 *ngIf="select" class="card-title">{{ingredient.name}}</h5>
+    <label *ngIf="!select">Ingredient name : <input [(ngModel)]="ingredient.name" class="card-title"></label>
+    <p class="card-text">
+      {{ingredient.price | tax | currency}}
+      {{ingredient.weight}}
+    </p>
+
+    <div style="text-align: center">
+      <button (click)="onSelect(ingredient)" *ngIf="select" class="btn btn-primary">Sélectionner</button>
+      &nbsp;
+      <a *ngIf="select" [routerLink]="['/ingredients/', ingredient.id]" class="btn btn-info">Détails</a>
+
+      <button (click)="onSelect(ingredient)" *ngIf="!select" class="btn btn-warning">Désélectionner</button>
+      &nbsp;
+      <button (click)="save()" *ngIf="!select" class="btn btn-primary">Modifier</button>
+      &nbsp;
+      <button (click)="delete()" *ngIf="!select" class="btn btn-danger">Supprimer</button>
+    </div>
+  </div>
+</div>
