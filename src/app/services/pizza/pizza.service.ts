@@ -2,6 +2,7 @@ import {Injectable} from '@angular/core';
 import {Pizza} from '../../models/pizza.model';
 import * as _ from 'lodash';
 import {HttpClient} from '@angular/common/http';
+import {environment} from '../../../environments/environment';
 
 @Injectable({
   providedIn: 'root'
@@ -12,7 +13,7 @@ export class PizzaService {
   constructor(
     private http: HttpClient
   ) {
-    this.URL = 'http://localhost:3000/';
+    this.URL = environment.apiURL;
   }
 
   getPizzas(): Promise<Pizza[]> {
