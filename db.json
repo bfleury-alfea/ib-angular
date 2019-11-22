@@ -209,20 +209,6 @@
       "price": 7,
       "image": "assets/pizzas/urban-kebab.png",
       "ingredients": []
-    },
-    {
-      "id": 31,
-      "name": "Vegan Margherita",
-      "price": 6,
-      "image": "assets/pizzas/vegan-margherita.png",
-      "ingredients": []
-    },
-    {
-      "id": 32,
-      "name": "Vegan Peppina",
-      "price": 7,
-      "image": "assets/pizzas/vegan-peppina.png",
-      "ingredients": []
     }
   ],
   "ingredients": [
@@ -466,34 +452,6 @@
     }
   ],
   "users": [
-    {
-      "firstname": "Firstname",
-      "lastname": "Lastname",
-      "email": "first.last@gmail.com",
-      "birthday": "2003-02-01",
-      "avatar": "assets/avatars/first.last.png",
-      "password": "123456",
-      "id": 1
-    },
-    {
-      "firstname": "azeae",
-      "lastname": "azeaz",
-      "email": "azea@azea.az",
-      "birthday": "2001-01-01",
-      "avatar": "assets/avatars/azeazeaze",
-      "password": "azerty",
-      "id": 2
-    },
-    {
-      "firstname": "wxcwxc",
-      "lastname": "wxcwxc",
-      "email": "wxcwxc@wxc.wxc",
-      "birthday": "2001-01-01",
-      "avatar": "assets/avatars/wxcwxc",
-      "password": "wxcwxc",
-      "id": 3,
-      "uid": "cIOptPmkbFWe55qsUVnNLJ7se0F3"
-    },
     {
       "firstname": "bruno",
       "lastname": "fleury",
