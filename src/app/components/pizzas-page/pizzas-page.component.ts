@@ -37,7 +37,7 @@ export class PizzasPageComponent implements OnInit {
     });
 
 
-    this.user = new User(1, 'John', 'Doe', '1992-12-19', 'unknown.svg');
+    this.user = new User(1, 'alvnububtftgvpUHTDexOvP', 'John', 'Doe', 'john.doe@gmail.com', 'notAPassword', '1992-12-19', 'unknown.svg');
     this.ingredientService.getIngredients().subscribe((ingredients) => this.ingredients = ingredients);
     this.sort = {
       field: 'name',

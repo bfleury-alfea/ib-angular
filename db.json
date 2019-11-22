@@ -464,5 +464,45 @@
       "price": 1.5,
       "image": "/assets/ingredients/viande-kebab.png"
     }
+  ],
+  "users": [
+    {
+      "firstname": "Firstname",
+      "lastname": "Lastname",
+      "email": "first.last@gmail.com",
+      "birthday": "2003-02-01",
+      "avatar": "/assets/avatars/first.last.png",
+      "password": "123456",
+      "id": 1
+    },
+    {
+      "firstname": "azeae",
+      "lastname": "azeaz",
+      "email": "azea@azea.az",
+      "birthday": "2001-01-01",
+      "avatar": "/assets/avatars/azeazeaze",
+      "password": "azerty",
+      "id": 2
+    },
+    {
+      "firstname": "wxcwxc",
+      "lastname": "wxcwxc",
+      "email": "wxcwxc@wxc.wxc",
+      "birthday": "2001-01-01",
+      "avatar": "/assets/avatars/wxcwxc",
+      "password": "wxcwxc",
+      "id": 3,
+      "uid": "cIOptPmkbFWe55qsUVnNLJ7se0F3"
+    },
+    {
+      "firstname": "bruno",
+      "lastname": "fleury",
+      "email": "bfleury@gmail.com",
+      "birthday": "1992-12-19",
+      "avatar": "/assets/avatars/bfleury.jpg",
+      "password": "azerty",
+      "id": 4,
+      "uid": "G3wzv02joIP2D96MfmNJXtLMf1i2"
+    }
   ]
 }

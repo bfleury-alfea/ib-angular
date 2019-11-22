@@ -1,9 +1,10 @@
-import { Injectable } from '@angular/core';
+import {Injectable} from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import {Observable} from 'rxjs';
 import {User} from '../../models/user.model';
-import {delay, flatMap, map} from 'rxjs/operators';
+import {delay, flatMap, map, mergeMap} from 'rxjs/operators';
 import * as _ from 'lodash';
+import {AngularFireAuth} from '@angular/fire/auth';
 
 @Injectable({
   providedIn: 'root'
@@ -12,7 +13,8 @@ export class UserService {
   private URL: string;
 
   constructor(
-    private http: HttpClient
+    private http: HttpClient,
+    private authService: AngularFireAuth
   ) {
     this.URL = 'http://localhost:3000/';
   }
@@ -47,10 +49,21 @@ export class UserService {
       map((max) => {
         user.id = max + 1;
       }),
+      mergeMap(() => this.createUserFirebase(user.email, user.password).then((uid) => user.uid = (uid ? uid : ''))),
       flatMap(() => {
         return this.http.post(this.URL + 'users', user).pipe(map(((response) => response as User)));
       })
     );
+  }
+
+  createUserFirebase(email: string, password: string): Promise<void | string> {
+    return this.authService.auth.createUserWithEmailAndPassword(email, password).then((userC) => {
+      console.log('createUserFirebase');
+      console.log(userC.user.uid);
+      return Promise.resolve(userC.user.uid) ;
+    }).catch((error) => {
+      console.error(error);
+    });
   }
 
   updateUser(user: User): Observable<User> {

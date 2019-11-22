@@ -13,10 +13,6 @@
     </div>
 
     <div class="form-group col-sm-6">
-
-    </div>
-
-    <div class="form-group col-sm-6">
       <label class="col-form-label" for="lastname">Lastname</label>
       <div class="input-group">
         <input class="form-control" formControlName="lastname" id="lastname" name="lastname">
@@ -26,20 +22,20 @@
       </div>
     </div>
 
-    <div class="form-group col-sm-6" formGroupName="passwordForm">
+    <div [formGroup]="passwordForm" class="form-group col-sm-6">
       <label class="col-form-label" for="password">Password</label>
       <div class="input-group">
-        <input class="form-control" formControlName="password" id="password" name="password">
+        <input class="form-control" formControlName="password" id="password" name="password" type="password">
         <div class="input-group-prepend">
           <span class="input-group-text"><i class="fas fa-lock"></i></span>
         </div>
       </div>
     </div>
 
-    <div class="form-group col-sm-6" formGroupName="passwordForm">
+    <div [formGroup]="passwordForm" class="form-group col-sm-6">
       <label class="col-form-label" for="confirm_password">Confirm Password</label>
       <div class="input-group">
-        <input class="form-control" formControlName="confirm_password" id="confirm_password" name="confirm_password">
+        <input class="form-control" formControlName="confirm_password" id="confirm_password" name="confirm_password" type="password">
         <div class="input-group-prepend">
           <span class="input-group-text"><i class="fas fa-lock"></i></span>
         </div>
@@ -49,7 +45,7 @@
     <div class="form-group col-sm-6">
       <label class="col-form-label" for="email">Email</label>
       <div class="input-group">
-        <input class="form-control" formControlName="email" id="email" name="email">
+        <input class="form-control" formControlName="email" id="email" name="email" type="email">
         <div class="input-group-prepend">
           <span class="input-group-text"><i class="fas fa-envelope"></i></span>
         </div>
@@ -59,7 +55,7 @@
     <div class="form-group col-sm-6">
       <label class="col-form-label" for="birthday">Birthday</label>
       <div class="input-group">
-        <input class="form-control" formControlName="birthday" id="birthday" name="birthday">
+        <input class="form-control" formControlName="birthday" id="birthday" name="birthday" type="date">
         <div class="input-group-prepend">
           <span class="input-group-text"><i class="fas fa-birthday-cake"></i></span>
         </div>
@@ -76,7 +72,6 @@
       </div>
     </div>
 
-
     <div class="col-12" style="text-align: center">
       <button [class.btn-primary]="userForm.valid" [class.btn-secondary]="!userForm.valid" [disabled]="!userForm.valid" class="btn">Créer le User</button>
       &nbsp;
@@ -84,6 +79,3 @@
     </div>
   </div>
 </form>
-
-
-Lock : <i class="fas fa-lock"></i>

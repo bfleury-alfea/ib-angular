@@ -1,29 +1,31 @@
-<div *ngIf="type==='details'" class="row">
-  <div *ngFor="let ingredient of ingredients" class="col-4-lg col-6-sm">
-    <div><label>ID :</label>{{ingredient.id}}</div>
-    <div><label>Name :</label>{{ingredient.name}}</div>
-    <div><label>Weight :</label>{{ingredient.weight}}</div>
-    <div><label>Price :</label>{{ingredient.price}}</div>
-    <div><label>Image :</label><img [alt]="ingredient.image" [src]="ingredient.image"/></div>
+<div *ngIf="ingredients && type">
+  <div *ngIf="type==='details'" class="row">
+    <div *ngFor="let ingredient of ingredients" class="col-4-lg col-6-sm">
+      <div><label>ID :</label>{{ingredient.id}}</div>
+      <div><label>Name :</label>{{ingredient.name}}</div>
+      <div><label>Weight :</label>{{ingredient.weight}}</div>
+      <div><label>Price :</label>{{ingredient.price}}</div>
+      <div><label>Image :</label><img [alt]="ingredient.image" [src]="ingredient.image"/></div>
+    </div>
   </div>
-</div>
 
-<div *ngIf="type==='card'">
-  <div class="row">
-    <div (click)="onSelect(ingredient)" *ngFor="let ingredient of ingredients" class="card col-3 col-lg-2 m-1" style="cursor: pointer">
-      <img [alt]="ingredient.name" [src]="ingredient.image" class="media-img-top img-fluid mt-3">
-      <div class="media-body">
-        <h6 class="media-title">{{ingredient.name}}</h6>
-        <p class="media-text">{{ingredient.weight}}g / {{ingredient.price}}€</p>
+  <div *ngIf="type==='card'">
+    <div class="row">
+      <div (click)="onSelect(ingredient)" *ngFor="let ingredient of ingredients" class="card col-3 col-lg-2 m-1" style="cursor: pointer">
+        <img [alt]="ingredient.name" [src]="ingredient.image" class="media-img-top img-fluid mt-3">
+        <div class="media-body">
+          <h6 class="media-title">{{ingredient.name}}</h6>
+          <p class="media-text">{{ingredient.weight}}g / {{ingredient.price}}€</p>
+        </div>
       </div>
     </div>
   </div>
-</div>
 
-<div *ngIf="type==='list'">
-  <ul>
-    <li (click)="onSelect(ingredient)" *ngFor="let ingredient of ingredients" [class.selected]="">
-      {{ingredient.name}} ({{ingredient.weight}}g/{{ingredient.price}}€)
-    </li>
-  </ul>
+  <div *ngIf="type==='list'">
+    <ul>
+      <li (click)="onSelect(ingredient)" *ngFor="let ingredient of ingredients" [class.selected]="">
+        {{ingredient.name}} ({{ingredient.weight}}g/{{ingredient.price}}€)
+      </li>
+    </ul>
+  </div>
 </div>

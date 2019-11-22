@@ -1,4 +1,7 @@
 import {Component, Input, OnInit} from '@angular/core';
+import {AngularFireAuth} from '@angular/fire/auth';
+import {Router} from '@angular/router';
+import {MessagesService} from '../../services/messages/messages.service';
 
 @Component({
   selector: 'app-menu',
@@ -9,7 +12,11 @@ export class MenuComponent implements OnInit {
   isCollapsed: boolean;
   @Input() title: string;
 
-  constructor() {
+  constructor(
+    private authService: AngularFireAuth,
+    private router: Router,
+    private messagesService: MessagesService,
+  ) {
   }
 
   ngOnInit() {
@@ -18,5 +25,14 @@ export class MenuComponent implements OnInit {
 
   toggleCollapseNavbar() {
     this.isCollapsed = !this.isCollapsed;
+  }
+
+  logout() {
+    this.authService.auth.signOut().then((userC) => {
+      this.messagesService.addMessage('Logged out', 'success');
+      this.router.navigate(['/pizzas']);
+    }).catch((error) => {
+      console.error(error);
+    });
   }
 }

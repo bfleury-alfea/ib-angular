@@ -31,13 +31,6 @@ export function userMailValid(): ValidatorFn {
 
 export function userPasswordsMatch(): ValidatorFn {
   return ((control: AbstractControl) => {
-    console.log(control.value);
-
-    return null;
-
-    // const password1 = control.password;
-    // const password2 = control.confirm_password;
-    //
-    // return (password1 === password2 ? {passwordDiff: true} : null);
+    return (control.value.password === control.value.confirm_password ? null : {noMatch: true});
   });
 }

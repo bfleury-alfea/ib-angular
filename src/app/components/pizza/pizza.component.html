@@ -1,4 +1,4 @@
-<div *ngIf="pizza" class="card my-3">
+<div *ngIf="pizza && select" class="card my-3">
   <img [alt]="pizza.name" [src]="pizza.image" class="card-img-top img-fluid">
   <div class="card-body">
     <h5 *ngIf="!edit" class="card-title">{{pizza.name}}</h5>

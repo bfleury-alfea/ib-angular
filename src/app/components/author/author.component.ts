@@ -8,8 +8,7 @@ import {User} from '../../models/user.model';
 })
 export class AuthorComponent implements OnInit {
 
-  @Input()
-  user: User;
+  @Input() user: User;
 
   constructor() {
   }

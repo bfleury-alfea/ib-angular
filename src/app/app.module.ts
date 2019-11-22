@@ -1,7 +1,10 @@
-import {BrowserModule} from '@angular/platform-browser';
 import {NgModule} from '@angular/core';
-import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
+import {AngularFireModule} from '@angular/fire';
+import {AngularFireAuthModule} from '@angular/fire/auth';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import {BrowserModule} from '@angular/platform-browser';
+import {environment} from '../environments/environment';
 // Components //
 import {AppComponent} from './app.component';
 import {AppRoutingModule} from './app-routing.module';
@@ -11,12 +14,14 @@ import {IngredientFormPageComponent} from './components/ingredient-form-page/ing
 import {IngredientPageComponent} from './components/ingredient-page/ingredient-page.component';
 import {IngredientsPageComponent} from './components/ingredients-page/ingredients-page.component';
 import {ListIngredientsComponent} from './components/list-ingredients/list-ingredients.component';
+import {LoginFormPageComponent} from './components/login-form-page/login-form-page.component';
 import {MenuComponent} from './components/menu/menu.component';
 import {MessagesComponent} from './components/messages/messages.component';
 import {PizzaComponent} from './components/pizza/pizza.component';
 import {PizzaFormPageComponent} from './components/pizza-form-page/pizza-form-page.component';
 import {PizzaPageComponent} from './components/pizza-page/pizza-page.component';
 import {PizzasPageComponent} from './components/pizzas-page/pizzas-page.component';
+import {UserFormPageComponent} from './components/user-form-page/user-form-page.component';
 // Directives //
 import {BgDirective} from './directives/bg/bg.directive';
 import {DCEmptyDirective} from './directives/dc-empty/dc-empty.directive';
@@ -29,11 +34,11 @@ import {SortPipe} from './pipes/sort/sort.pipe';
 import {TaxPipe} from './pipes/tax/tax.pipe';
 import {TestPipe} from './pipes/test/test.pipe';
 import {IngredientComponent} from './components/ingredient/ingredient.component';
-import { UserFormPageComponent } from './components/user-form-page/user-form-page.component';
 
 @NgModule({
   declarations: [
     AppComponent,
+
     AuthorComponent,
     HomePageComponent,
     IngredientComponent,
@@ -41,6 +46,7 @@ import { UserFormPageComponent } from './components/user-form-page/user-form-pag
     IngredientPageComponent,
     IngredientsPageComponent,
     ListIngredientsComponent,
+    LoginFormPageComponent,
     MenuComponent,
     MessagesComponent,
     PizzaComponent,
@@ -62,6 +68,8 @@ import { UserFormPageComponent } from './components/user-form-page/user-form-pag
   ],
   imports: [
     AppRoutingModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFireAuthModule,
     BrowserModule,
     FormsModule,
     HttpClientModule,
