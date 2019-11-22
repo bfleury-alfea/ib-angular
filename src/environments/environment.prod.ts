@@ -3,5 +3,5 @@ export const environment = {
   firebase: {
     apiKey: 'AIzaSyBwG5JkOtkWMbxCR92YERzKykSUQYsWKIU',
   },
-  apiURL: 'https://mys-json.typicode/bfleury-alfea/ib-angular/'
+  apiURL: 'https://my-json-server.typicode.com/bfleury-alfea/ib-angular/'
 };
