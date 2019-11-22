@@ -29,6 +29,7 @@ import {SortPipe} from './pipes/sort/sort.pipe';
 import {TaxPipe} from './pipes/tax/tax.pipe';
 import {TestPipe} from './pipes/test/test.pipe';
 import {IngredientComponent} from './components/ingredient/ingredient.component';
+import { UserFormPageComponent } from './components/user-form-page/user-form-page.component';
 
 @NgModule({
   declarations: [
@@ -46,6 +47,7 @@ import {IngredientComponent} from './components/ingredient/ingredient.component'
     PizzaFormPageComponent,
     PizzaPageComponent,
     PizzasPageComponent,
+    UserFormPageComponent,
 
     BgDirective,
     DCEmptyDirective,

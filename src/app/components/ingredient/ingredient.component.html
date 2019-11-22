@@ -1,12 +1,20 @@
 <div *ngIf="ingredient" class="card my-3">
   <img [alt]="ingredient.name" [src]="ingredient.image" class="card-img-top img-fluid">
   <div class="card-body">
-    <h5 *ngIf="select" class="card-title">{{ingredient.name}}</h5>
-    <label *ngIf="!select">Ingredient name : <input [(ngModel)]="ingredient.name" class="card-title"></label>
-    <p class="card-text">
-      {{ingredient.price | tax | currency}}
-      {{ingredient.weight}}
-    </p>
+    <h5 *ngIf="!edit" class="card-title">{{ingredient.name}}</h5>
+    <label *ngIf="edit">Ingredient name : <input [(ngModel)]="ingredient.name" class="card-title form-control"></label>
+
+    <div class="card-text">
+      <div class="form-group">
+        <span *ngIf="!edit">{{ingredient.price | tax | currency}}</span>
+        <label *ngIf="edit">Price : <input [(ngModel)]="ingredient.price" class="form-control"></label>
+      </div>
+
+      <div class="form-group">
+        <span *ngIf="!edit">{{ingredient.weight}}</span>
+        <label *ngIf="edit">Weight : <input [(ngModel)]="ingredient.weight" class="form-control"></label>
+      </div>
+    </div>
 
     <div style="text-align: center">
       <button (click)="onSelect(ingredient)" *ngIf="select" class="btn btn-primary">Sélectionner</button>
@@ -15,7 +23,8 @@
 
       <button (click)="onSelect(ingredient)" *ngIf="!select" class="btn btn-warning">Désélectionner</button>
       &nbsp;
-      <button (click)="save()" *ngIf="!select" class="btn btn-primary">Modifier</button>
+      <button (click)="editPizza()" *ngIf="!edit && !select" class="btn btn-primary">Modifier</button>
+      <button (click)="save()" *ngIf="edit && !select" class="btn btn-primary">Enregistrer</button>
       &nbsp;
       <button (click)="delete()" *ngIf="!select" class="btn btn-danger">Supprimer</button>
     </div>

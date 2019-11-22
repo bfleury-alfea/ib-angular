@@ -2,7 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 import {Router} from '@angular/router';
 import {IngredientService} from '../../services/ingredient/ingredient.service';
-import {ingredientExists} from '../../validators/ingredient-exists';
+import {ingredientExists} from '../../validators/validators';
 
 @Component({
   selector: 'app-ingredient-form-page',
@@ -23,7 +23,7 @@ export class IngredientFormPageComponent implements OnInit {
       weight: fb.control(0, [Validators.required]),
       image: fb.control('', [])
     });
-  }
+  }me
 
   ngOnInit() {
   }

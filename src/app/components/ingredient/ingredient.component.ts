@@ -13,6 +13,7 @@ export class IngredientComponent implements OnInit {
   @Input() ingredient: Ingredient;
   @Input() select: boolean;
   @Output() eventEmitter: EventEmitter<Ingredient>;
+  edit: boolean;
 
   constructor(
     private messagesService: MessagesService,
@@ -33,9 +34,14 @@ export class IngredientComponent implements OnInit {
     }
   }
 
+  editPizza() {
+    this.edit = true;
+  }
+
   save() {
     this.ingredientService.updateIngredient(this.ingredient).subscribe((ingredient) => {
       this.messagesService.addMessage('Ingredient saved');
+      this.edit = false;
     });
   }
 

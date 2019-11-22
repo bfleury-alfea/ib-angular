@@ -8,6 +8,7 @@ import {IngredientsPageComponent} from './components/ingredients-page/ingredient
 import {PizzaFormPageComponent} from './components/pizza-form-page/pizza-form-page.component';
 import {PizzaPageComponent} from './components/pizza-page/pizza-page.component';
 import {PizzasPageComponent} from './components/pizzas-page/pizzas-page.component';
+import {UserFormPageComponent} from './components/user-form-page/user-form-page.component';
 // Services //
 import {PizzaResolverService} from './services/pizza-resolver/pizza-resolver.service';
 
@@ -46,6 +47,18 @@ import {PizzaResolverService} from './services/pizza-resolver/pizza-resolver.ser
         {
           path: 'ingredients/:id',
           component: IngredientPageComponent,
+        },
+        // {
+        //   path: 'users',
+        //   component: UsersPageComponent,
+        // },
+        // {
+        //   path: 'users/:id',
+        //   component: UserPageComponent,
+        // },
+        {
+          path: 'users/create',
+          component: UserFormPageComponent,
         },
       ]
     )],

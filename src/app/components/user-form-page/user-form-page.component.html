@@ -1,0 +1,89 @@
+<form (ngSubmit)="save()" [formGroup]="userForm" class="row">
+  <div class="row">
+    <h2 class="col-12">Create User</h2>
+
+    <div class="form-group col-sm-6">
+      <label class="col-form-label" for="firstname">Firstname</label>
+      <div class="input-group">
+        <input class="form-control" formControlName="firstname" id="firstname" name="firstname">
+        <div class="input-group-prepend">
+          <span class="input-group-text"><i class="fas fa-user-tag"></i></span>
+        </div>
+      </div>
+    </div>
+
+    <div class="form-group col-sm-6">
+
+    </div>
+
+    <div class="form-group col-sm-6">
+      <label class="col-form-label" for="lastname">Lastname</label>
+      <div class="input-group">
+        <input class="form-control" formControlName="lastname" id="lastname" name="lastname">
+        <div class="input-group-prepend">
+          <span class="input-group-text"><i class="fas fa-lock"></i></span>
+        </div>
+      </div>
+    </div>
+
+    <div class="form-group col-sm-6" formGroupName="passwordForm">
+      <label class="col-form-label" for="password">Password</label>
+      <div class="input-group">
+        <input class="form-control" formControlName="password" id="password" name="password">
+        <div class="input-group-prepend">
+          <span class="input-group-text"><i class="fas fa-lock"></i></span>
+        </div>
+      </div>
+    </div>
+
+    <div class="form-group col-sm-6" formGroupName="passwordForm">
+      <label class="col-form-label" for="confirm_password">Confirm Password</label>
+      <div class="input-group">
+        <input class="form-control" formControlName="confirm_password" id="confirm_password" name="confirm_password">
+        <div class="input-group-prepend">
+          <span class="input-group-text"><i class="fas fa-lock"></i></span>
+        </div>
+      </div>
+    </div>
+
+    <div class="form-group col-sm-6">
+      <label class="col-form-label" for="email">Email</label>
+      <div class="input-group">
+        <input class="form-control" formControlName="email" id="email" name="email">
+        <div class="input-group-prepend">
+          <span class="input-group-text"><i class="fas fa-envelope"></i></span>
+        </div>
+      </div>
+    </div>
+
+    <div class="form-group col-sm-6">
+      <label class="col-form-label" for="birthday">Birthday</label>
+      <div class="input-group">
+        <input class="form-control" formControlName="birthday" id="birthday" name="birthday">
+        <div class="input-group-prepend">
+          <span class="input-group-text"><i class="fas fa-birthday-cake"></i></span>
+        </div>
+      </div>
+    </div>
+
+    <div class="form-group col-sm-6">
+      <label class="col-form-label" for="avatar">Avatar</label>
+      <div class="input-group">
+        <input class="form-control" formControlName="avatar" id="avatar" name="avatar">
+        <div class="input-group-prepend">
+          <span class="input-group-text"><i class="fas fa-user-circle"></i></span>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="col-12" style="text-align: center">
+      <button [class.btn-primary]="userForm.valid" [class.btn-secondary]="!userForm.valid" [disabled]="!userForm.valid" class="btn">Créer le User</button>
+      &nbsp;
+      <button class="btn btn-danger" routerLink="/users">Annuler</button>
+    </div>
+  </div>
+</form>
+
+
+Lock : <i class="fas fa-lock"></i>
