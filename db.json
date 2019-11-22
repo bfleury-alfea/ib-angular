@@ -4,224 +4,210 @@
       "id": 1,
       "name": "4 Fromages",
       "price": 7,
-      "image": "/assets/pizzas/4-fromages.png",
+      "image": "assets/pizzas/4-fromages.png",
       "ingredients": []
     },
     {
       "id": 2,
       "name": "Bacon Groovy",
       "price": 7,
-      "image": "/assets/pizzas/bacon-groovy.png",
+      "image": "assets/pizzas/bacon-groovy.png",
       "ingredients": []
     },
     {
       "id": 3,
       "name": "Bellachô",
       "price": 7,
-      "image": "/assets/pizzas/bellacho.png",
+      "image": "assets/pizzas/bellacho.png",
       "ingredients": []
     },
     {
       "id": 4,
       "name": "Cannibale",
       "price": 7,
-      "image": "/assets/pizzas/cannibale.png",
+      "image": "assets/pizzas/cannibale.png",
       "ingredients": []
     },
     {
       "id": 5,
       "name": "Chickenita Pepperoni",
       "price": 7,
-      "image": "/assets/pizzas/chickenita-pepperoni.png",
+      "image": "assets/pizzas/chickenita-pepperoni.png",
       "ingredients": []
     },
     {
       "id": 6,
       "name": "Classique Jambon",
       "price": 6,
-      "image": "/assets/pizzas/classique-jambon.png",
+      "image": "assets/pizzas/classique-jambon.png",
       "ingredients": []
     },
     {
       "id": 7,
       "name": "Deluxe",
       "price": 7,
-      "image": "/assets/pizzas/deluxe.png",
+      "image": "assets/pizzas/deluxe.png",
       "ingredients": []
     },
     {
       "id": 8,
       "name": "Diavola",
       "price": 7,
-      "image": "/assets/pizzas/diavola.png",
+      "image": "assets/pizzas/diavola.png",
       "ingredients": []
     },
     {
       "id": 9,
       "name": "Diavola Pepperoni",
       "price": 7,
-      "image": "/assets/pizzas/diavola-pepperoni.png",
+      "image": "assets/pizzas/diavola-pepperoni.png",
       "ingredients": []
     },
     {
       "id": 10,
       "name": "Extravaganzza",
       "price": 7,
-      "image": "/assets/pizzas/extravaganzza.png",
+      "image": "assets/pizzas/extravaganzza.png",
       "ingredients": []
     },
     {
       "id": 11,
       "name": "Figue - Chèvre",
       "price": 11.5,
-      "image": "/assets/pizzas/figue-chevre.png",
+      "image": "assets/pizzas/figue-chevre.png",
       "ingredients": []
     },
     {
       "id": 12,
       "name": "Forestière",
       "price": 7,
-      "image": "/assets/pizzas/forestiere.png",
+      "image": "assets/pizzas/forestiere.png",
       "ingredients": []
     },
     {
       "id": 13,
       "name": "Hawaïenne Jambon",
       "price": 7,
-      "image": "/assets/pizzas/hawaienne-jambon.png",
+      "image": "assets/pizzas/hawaienne-jambon.png",
       "ingredients": []
     },
     {
       "id": 14,
       "name": "Hawaïenne Poulet",
       "price": 7,
-      "image": "/assets/pizzas/hawaienne-poulet.png",
+      "image": "assets/pizzas/hawaienne-poulet.png",
       "ingredients": []
     },
     {
       "id": 15,
       "name": "Hypnotika",
       "price": 7,
-      "image": "/assets/pizzas/hypnotika.png",
+      "image": "assets/pizzas/hypnotika.png",
       "ingredients": []
     },
     {
       "id": 16,
       "name": "Indienne",
       "price": 7,
-      "image": "/assets/pizzas/indienne.png",
+      "image": "assets/pizzas/indienne.png",
       "ingredients": []
     },
     {
       "id": 17,
       "name": "Margherita",
       "price": 6,
-      "image": "/assets/pizzas/margherita.png",
+      "image": "assets/pizzas/margherita.png",
       "ingredients": []
     },
     {
       "id": 18,
       "name": "Orientale",
       "price": 7,
-      "image": "/assets/pizzas/orientale.png",
+      "image": "assets/pizzas/orientale.png",
       "ingredients": []
     },
     {
       "id": 19,
       "name": "Originale Pepperoni",
       "price": 6,
-      "image": "/assets/pizzas/originale-pepperoni.png",
+      "image": "assets/pizzas/originale-pepperoni.png",
       "ingredients": []
     },
     {
       "id": 20,
       "name": "Pêcheur",
       "price": 7,
-      "image": "/assets/pizzas/pecheur.png",
+      "image": "assets/pizzas/pecheur.png",
       "ingredients": []
     },
     {
       "id": 21,
       "name": "Pepper Beef",
       "price": 7,
-      "image": "/assets/pizzas/pepper-beef.png",
+      "image": "assets/pizzas/pepper-beef.png",
       "ingredients": []
     },
     {
       "id": 22,
       "name": "Peppina",
       "price": 7,
-      "image": "/assets/pizzas/peppina.png",
+      "image": "assets/pizzas/peppina.png",
       "ingredients": []
     },
     {
       "id": 23,
       "name": "Reine",
       "price": 7,
-      "image": "/assets/pizzas/reine.png",
+      "image": "assets/pizzas/reine.png",
       "ingredients": []
     },
     {
       "id": 24,
       "name": "Saumon",
       "price": 11.5,
-      "image": "/assets/pizzas/saumon.png",
+      "image": "assets/pizzas/saumon.png",
       "ingredients": []
     },
     {
       "id": 25,
       "name": "Savoyarde",
       "price": 7,
-      "image": "/assets/pizzas/savoyarde.png",
+      "image": "assets/pizzas/savoyarde.png",
       "ingredients": []
     },
     {
       "id": 26,
       "name": "Spéciale Merguez",
       "price": 6,
-      "image": "/assets/pizzas/speciale-merguez.png",
+      "image": "assets/pizzas/speciale-merguez.png",
       "ingredients": []
     },
     {
       "id": 27,
       "name": "Spicy Dallas Burger",
       "price": 11.5,
-      "image": "/assets/pizzas/spicy-dallas-burger.png",
+      "image": "assets/pizzas/spicy-dallas-burger.png",
       "ingredients": []
     },
     {
       "id": 28,
       "name": "Steak & Cheese",
       "price": 7,
-      "image": "/assets/pizzas/steak-cheese.png",
+      "image": "assets/pizzas/steak-cheese.png",
       "ingredients": []
     },
     {
       "id": 29,
       "name": "Texas Grill",
       "price": 7,
-      "image": "/assets/pizzas/texas-grill.png",
+      "image": "assets/pizzas/texas-grill.png",
       "ingredients": []
     },
     {
       "id": 30,
       "name": "Urban Kebab",
       "price": 7,
-      "image": "/assets/pizzas/urban-kebab.png",
-      "ingredients": []
-    },
-    {
-      "id": 31,
-      "name": "Vegan Margherita",
-      "price": 6,
-      "image": "/assets/pizzas/vegan-margherita.png",
-      "ingredients": []
-    },
-    {
-      "id": 32,
-      "name": "Vegan Peppina",
-      "price": 7,
-      "image": "/assets/pizzas/vegan-peppina.png",
+      "image": "assets/pizzas/urban-kebab.png",
       "ingredients": []
     }
   ],
@@ -231,275 +217,247 @@
       "name": "Ananas",
       "weight": 1,
       "price": 1.5,
-      "image": "/assets/ingredients/ananas.png"
+      "image": "assets/ingredients/ananas.png"
     },
     {
       "id": 2,
       "name": "Assaisonnement aux poivres",
       "weight": 2,
       "price": 0.5,
-      "image": "/assets/ingredients/assaisonnement-aux-poivres.png"
+      "image": "assets/ingredients/assaisonnement-aux-poivres.png"
     },
     {
       "id": 3,
       "name": "Bacon",
       "weight": 3,
       "price": 2,
-      "image": "/assets/ingredients/bacon.png"
+      "image": "assets/ingredients/bacon.png"
     },
     {
       "id": 4,
       "name": "Boulettes de bœuf assaisonnées",
       "weight": 4,
       "price": 1.5,
-      "image": "/assets/ingredients/boulettes-de-boeuf-assaisonnees.png"
+      "image": "assets/ingredients/boulettes-de-boeuf-assaisonnees.png"
     },
     {
       "id": 5,
       "name": "Champignons",
       "weight": 5,
       "price": 1.5,
-      "image": "/assets/ingredients/champignons.png"
+      "image": "assets/ingredients/champignons.png"
     },
     {
       "id": 6,
       "name": "Chèvre",
       "weight": 6,
       "price": 2,
-      "image": "/assets/ingredients/chevre.jpg"
+      "image": "assets/ingredients/chevre.jpg"
     },
     {
       "id": 7,
       "name": "Chorizo",
       "weight": 1,
       "price": 1.5,
-      "image": "/assets/ingredients/chorizo.png"
+      "image": "assets/ingredients/chorizo.png"
     },
     {
       "id": 8,
       "name": "Crème fraîche",
       "weight": 2,
       "price": 1.5,
-      "image": "/assets/ingredients/creme-fraiche.png"
+      "image": "assets/ingredients/creme-fraiche.png"
     },
     {
       "id": 9,
       "name": "Emmental",
       "weight": 3,
       "price": 1.5,
-      "image": "/assets/ingredients/emmental.png"
+      "image": "assets/ingredients/emmental.png"
     },
     {
       "id": 10,
       "name": "Figues séchées",
       "weight": 4,
       "price": 2,
-      "image": "/assets/ingredients/figues-sechees.png"
+      "image": "assets/ingredients/figues-sechees.png"
     },
     {
       "id": 11,
       "name": "Fournes d'Ambert",
       "weight": 5,
       "price": 1.5,
-      "image": "/assets/ingredients/fournes-d-ambert.png"
+      "image": "assets/ingredients/fournes-d-ambert.png"
     },
     {
       "id": 12,
       "name": "Jambon",
       "weight": 6,
       "price": 1.5,
-      "image": "/assets/ingredients/jambon.png"
+      "image": "assets/ingredients/jambon.png"
     },
     {
       "id": 13,
       "name": "Lardons",
       "weight": 1,
       "price": 1.5,
-      "image": "/assets/ingredients/lardons.png"
+      "image": "assets/ingredients/lardons.png"
     },
     {
       "id": 14,
       "name": "Merguez",
       "weight": 2,
       "price": 1.5,
-      "image": "/assets/ingredients/merguez.png"
+      "image": "assets/ingredients/merguez.png"
     },
     {
       "id": 15,
       "name": "Miel",
       "weight": 3,
       "price": 1.5,
-      "image": "/assets/ingredients/miel.png"
+      "image": "assets/ingredients/miel.png"
     },
     {
       "id": 16,
       "name": "Mozzarella",
       "weight": 4,
       "price": 1.5,
-      "image": "/assets/ingredients/mozzarella.png"
+      "image": "assets/ingredients/mozzarella.png"
     },
     {
       "id": 17,
       "name": "Oignons",
       "weight": 5,
       "price": 1.5,
-      "image": "/assets/ingredients/oignons.png"
+      "image": "assets/ingredients/oignons.png"
     },
     {
       "id": 18,
       "name": "Olives noires",
       "weight": 6,
       "price": 1.5,
-      "image": "/assets/ingredients/olives-noires.png"
+      "image": "assets/ingredients/olives-noires.png"
     },
     {
       "id": 19,
       "name": "Origan",
       "weight": 1,
       "price": 0,
-      "image": "/assets/ingredients/origan.png"
+      "image": "assets/ingredients/origan.png"
     },
     {
       "id": 20,
       "name": "Pepperoni Tranché",
       "weight": 2,
       "price": 1.5,
-      "image": "/assets/ingredients/pepperoni-tranche.png"
+      "image": "assets/ingredients/pepperoni-tranche.png"
     },
     {
       "id": 21,
       "name": "Piments jalapeños",
       "weight": 3,
       "price": 1.5,
-      "image": "/assets/ingredients/piments-jalapenos.jpg"
+      "image": "assets/ingredients/piments-jalapenos.jpg"
     },
     {
       "id": 22,
       "name": "Poivrons mélangés",
       "weight": 4,
       "price": 1.5,
-      "image": "/assets/ingredients/poivrons-melanges.jpg"
+      "image": "assets/ingredients/poivrons-melanges.jpg"
     },
     {
       "id": 23,
       "name": "Pomme de Terre",
       "weight": 5,
       "price": 1.5,
-      "image": "/assets/ingredients/pomme-de-terre.jpg"
+      "image": "assets/ingredients/pomme-de-terre.jpg"
     },
     {
       "id": 24,
       "name": "Poulet Rôti",
       "weight": 6,
       "price": 1.5,
-      "image": "/assets/ingredients/poulet-roti.png"
+      "image": "assets/ingredients/poulet-roti.png"
     },
     {
       "id": 25,
       "name": "Roblochon",
       "weight": 1,
       "price": 2,
-      "image": "/assets/ingredients/roblochon.png"
+      "image": "assets/ingredients/roblochon.png"
     },
     {
       "id": 26,
       "name": "Sauce BBQ",
       "weight": 2,
       "price": 1.5,
-      "image": "/assets/ingredients/sauce-bbq.png"
+      "image": "assets/ingredients/sauce-bbq.png"
     },
     {
       "id": 27,
       "name": "Sauce Dallas",
       "weight": 3,
       "price": 1.5,
-      "image": "/assets/ingredients/sauce-dallas.jpg"
+      "image": "assets/ingredients/sauce-dallas.jpg"
     },
     {
       "id": 28,
       "name": "Sauce Echalote et Aneth",
       "weight": 4,
       "price": 1.5,
-      "image": "/assets/ingredients/sauce-echalote-et-aneth.png"
+      "image": "assets/ingredients/sauce-echalote-et-aneth.png"
     },
     {
       "id": 29,
       "name": "Sauce Kebab",
       "weight": 5,
       "price": 1.5,
-      "image": "/assets/ingredients/sauce-kebab.png"
+      "image": "assets/ingredients/sauce-kebab.png"
     },
     {
       "id": 30,
       "name": "Sauce Texas Grill",
       "weight": 6,
       "price": 1.5,
-      "image": "/assets/ingredients/sauce-texas-grill.png"
+      "image": "assets/ingredients/sauce-texas-grill.png"
     },
     {
       "id": 31,
       "name": "Saumon",
       "weight": 1,
       "price": 2.5,
-      "image": "/assets/ingredients/saumon.png"
+      "image": "assets/ingredients/saumon.png"
     },
     {
       "id": 32,
       "name": "Thon",
       "weight": 2,
       "price": 1.5,
-      "image": "/assets/ingredients/thon.png"
+      "image": "assets/ingredients/thon.png"
     },
     {
       "id": 33,
       "name": "Tomates Fraîches",
       "weight": 3,
       "price": 1.5,
-      "image": "/assets/ingredients/tomates-fraiches.png"
+      "image": "assets/ingredients/tomates-fraiches.png"
     },
     {
       "id": 34,
       "name": "Viande Kebab",
       "weight": 4,
       "price": 1.5,
-      "image": "/assets/ingredients/viande-kebab.png"
+      "image": "assets/ingredients/viande-kebab.png"
     }
   ],
   "users": [
-    {
-      "firstname": "Firstname",
-      "lastname": "Lastname",
-      "email": "first.last@gmail.com",
-      "birthday": "2003-02-01",
-      "avatar": "/assets/avatars/first.last.png",
-      "password": "123456",
-      "id": 1
-    },
-    {
-      "firstname": "azeae",
-      "lastname": "azeaz",
-      "email": "azea@azea.az",
-      "birthday": "2001-01-01",
-      "avatar": "/assets/avatars/azeazeaze",
-      "password": "azerty",
-      "id": 2
-    },
-    {
-      "firstname": "wxcwxc",
-      "lastname": "wxcwxc",
-      "email": "wxcwxc@wxc.wxc",
-      "birthday": "2001-01-01",
-      "avatar": "/assets/avatars/wxcwxc",
-      "password": "wxcwxc",
-      "id": 3,
-      "uid": "cIOptPmkbFWe55qsUVnNLJ7se0F3"
-    },
     {
       "firstname": "bruno",
       "lastname": "fleury",
       "email": "bfleury@gmail.com",
       "birthday": "1992-12-19",
-      "avatar": "/assets/avatars/bfleury.jpg",
+      "avatar": "assets/avatars/bfleury.jpg",
       "password": "azerty",
       "id": 4,
       "uid": "G3wzv02joIP2D96MfmNJXtLMf1i2"

@@ -5,6 +5,7 @@ import {User} from '../../models/user.model';
 import {delay, flatMap, map, mergeMap} from 'rxjs/operators';
 import * as _ from 'lodash';
 import {AngularFireAuth} from '@angular/fire/auth';
+import {environment} from '../../../environments/environment';
 
 @Injectable({
   providedIn: 'root'
@@ -16,7 +17,7 @@ export class UserService {
     private http: HttpClient,
     private authService: AngularFireAuth
   ) {
-    this.URL = 'http://localhost:3000/';
+    this.URL = environment.apiURL;
   }
 
   getUsers(): Observable<User[]> {

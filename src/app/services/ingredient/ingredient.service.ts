@@ -4,6 +4,7 @@ import {Ingredient} from '../../models/ingredient.model';
 import * as _ from 'lodash';
 import {Observable} from 'rxjs';
 import {delay, flatMap, map} from 'rxjs/operators';
+import {environment} from '../../../environments/environment';
 
 @Injectable({
   providedIn: 'root'
@@ -14,7 +15,7 @@ export class IngredientService {
   constructor(
     private http: HttpClient
   ) {
-    this.URL = 'http://localhost:3000/';
+    this.URL = environment.apiURL;
   }
 
   getIngredients(): Observable<Ingredient[]> {
