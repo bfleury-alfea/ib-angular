@@ -3,5 +3,5 @@ export const environment = {
   firebase: {
     apiKey: 'AIzaSyBwG5JkOtkWMbxCR92YERzKykSUQYsWKIU',
   },
-  apiURL: 'http://localhost:3000'
+  apiURL: 'https://mys-json.typicode/bfleury-alfea/ib-angular/'
 };
